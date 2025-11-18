@@ -6,5 +6,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 find_package(OpenCV REQUIRED COMPONENTS core highgui imgproc calib3d)
 
-add_executable(lightweight_ar main.cpp capture_helpers.cpp checkerboard_tracker.cpp)
+add_executable(lightweight_ar main.cpp calibrator.cpp)
 target_link_libraries(lightweight_ar PRIVATE ${OpenCV_LIBS})

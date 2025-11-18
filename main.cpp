@@ -1,16 +1,18 @@
 #include <opencv2/opencv.hpp>
-#include "capture_helpers.hpp"
+#include "calibrator.hpp"
+#include <fstream>
 
 using namespace ar;
 
 int main()
 {
     cv::VideoCapture capture;
-    if (!initializeCapture(capture))
+
+    std::ifstream intrinsics_file("intrinsics.xml");
+    if (!intrinsics_file.good())
     {
-        return 1;
+        calibrateCamera(capture, 15, "calibration");
     }
 
-    captureLoop(capture);
     return 0;
 }
