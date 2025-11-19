@@ -1,6 +1,8 @@
+#include <fstream>
+#include <filesystem>
 #include <opencv2/opencv.hpp>
 #include "calibrator.hpp"
-#include <fstream>
+#include "augmentor.hpp"
 
 using namespace ar;
 
@@ -8,11 +10,13 @@ int main()
 {
     cv::VideoCapture capture;
 
-    std::ifstream intrinsics_file("intrinsics.xml");
-    if (!intrinsics_file.good())
+    const std::filesystem::path calibrationJson{"data/calibration/calibration.json"};
+    if (!std::filesystem::exists(calibrationJson))
     {
         calibrateCamera(capture, 15, "calibration");
     }
+
+    augmentLoop(capture);
 
     return 0;
 }

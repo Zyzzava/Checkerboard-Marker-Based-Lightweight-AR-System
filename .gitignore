@@ -6,6 +6,9 @@
 # Build files 
 build/
 
+# Data files 
+data/
+
 # User-specific files
 *.rsuser
 *.suo
