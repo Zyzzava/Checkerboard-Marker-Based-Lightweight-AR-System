@@ -8,7 +8,7 @@ namespace
     // Checkerboard pattern detection flags
     const cv::Size kPatternSize{8, 6};
     constexpr int kRequiredSamples = 15;
-    constexpr float kSquareSize = 30.0f;
+    constexpr float kSquareSize = 25.0f;
     const std::string kOutputDir = "calibration";
     const std::string kWindowName = "Checkerboard Calibration";
     const std::filesystem::path kBaseDataDir{"data"};
@@ -28,28 +28,16 @@ namespace
         return rows;
     }
 
-    nlohmann::json pointsToJson(const std::vector<cv::Point3f> &points)
-    {
-        nlohmann::json outer = nlohmann::json::array();
-        for (const auto &point : points)
-        {
-            outer.push_back({point.x, point.y, point.z});
-        }
-        return outer;
-    }
-
     void saveCalibrationData(const std::filesystem::path &dir,
                              const cv::Mat &cameraMatrix,
                              const cv::Mat &distCoeffs,
-                             double reprojectionError,
-                             const std::vector<cv::Point3f> &templatePoints)
+                             double reprojectionError)
     {
         std::filesystem::create_directories(dir);
         nlohmann::json j;
         j["reprojection_error"] = reprojectionError;
         j["camera_matrix"] = matToJson(cameraMatrix);
         j["distortion_coefficients"] = matToJson(distCoeffs);
-        j["object_points_template"] = pointsToJson(templatePoints);
 
         std::ofstream out(dir / "calibration.json");
         if (out)
@@ -155,6 +143,6 @@ namespace ar
                   << distCoeffs << std::endl;
 
         // Save calibration results
-        saveCalibrationData(storageDir, cameraMatrix, distCoeffs, reprojectionError, templatePoints);
+        saveCalibrationData(storageDir, cameraMatrix, distCoeffs, reprojectionError);
     }
 }

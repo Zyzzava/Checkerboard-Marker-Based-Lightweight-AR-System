@@ -24,8 +24,7 @@ namespace ar
 
     bool loadCalibrationData(const std::filesystem::path &path,
                              cv::Mat &cameraMatrix,
-                             cv::Mat &distCoeffs,
-                             std::vector<cv::Point3f> &objectPoints)
+                             cv::Mat &distCoeffs)
     {
         if (!std::filesystem::exists(path))
         {
@@ -44,17 +43,6 @@ namespace ar
         cameraMatrix = jsonToMat(data["camera_matrix"]);
         distCoeffs = jsonToMat(data["distortion_coefficients"]);
 
-        objectPoints.clear();
-        for (const auto &entry : data["object_points_template"])
-        {
-            if (entry.is_array() && entry.size() == 3)
-            {
-                objectPoints.emplace_back(entry[0].get<double>(),
-                                          entry[1].get<double>(),
-                                          entry[2].get<double>());
-            }
-        }
-
-        return !cameraMatrix.empty() && !distCoeffs.empty() && !objectPoints.empty();
+        return !cameraMatrix.empty() && !distCoeffs.empty();
     }
 }

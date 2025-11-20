@@ -6,6 +6,9 @@
 #include <opencv2/opencv.hpp>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+#include "tracker.hpp"
+#include "chessboard_tracker.hpp"
+#include "nft_tracker.hpp"
 
 namespace
 {
@@ -14,11 +17,27 @@ namespace
 
 void augmentLoop(cv::VideoCapture &capture)
 {
+    bool useNFT = true;
+
+    std::unique_ptr<PoseTracker> tracker;
+
+    if (useNFT)
+    {
+        auto nft = std::make_unique<NFTTracker>("data/reference/reference.png");
+        nft->init();
+        tracker = std::move(nft);
+    }
+    else
+    {
+        auto chess = std::make_unique<ChessboardTracker>(cv::Size(8, 6), 25.0f);
+        chess->init();
+        tracker = std::move(chess);
+    }
+
     // load calibration data
     cv::Mat cameraMatrix, distCoeffs;
-    std::vector<cv::Point3f> objectPoints;
-    initAugmentor(cameraMatrix, distCoeffs, objectPoints);
-    if (cameraMatrix.empty() || distCoeffs.empty() || objectPoints.empty())
+    initAugmentor(cameraMatrix, distCoeffs);
+    if (cameraMatrix.empty() || distCoeffs.empty())
     {
         std::cerr << "Failed to load calibration data." << std::endl;
         return;
@@ -68,6 +87,7 @@ void augmentLoop(cv::VideoCapture &capture)
 
     cv::Mat frame;
     cv::Size patternSize(8, 6);
+    cv::Mat rvec, tvec, rotationMatrix;
 
     while (!glfwWindowShouldClose(window))
     {
@@ -84,32 +104,66 @@ void augmentLoop(cv::VideoCapture &capture)
         // update and draw camera frame as background
         renderer.updateBackground(frame);
         renderer.drawBackground();
-        
 
         // estimate pose
-        cv::Mat gray;
-        cv::cvtColor(frame, gray, cv::COLOR_BGR2GRAY);
-        std::vector<cv::Point2f> corner_pts;
-        bool success = cv::findChessboardCorners(gray, patternSize, corner_pts, cv::CALIB_CB_ADAPTIVE_THRESH | cv::CALIB_CB_FAST_CHECK | cv::CALIB_CB_NORMALIZE_IMAGE);
-
-                if (success)
+        bool success = tracker->estimatePose(frame, cameraMatrix, distCoeffs, rvec, tvec);
+        if (success)
         {
-            // Refine corner locations to sub-pixel accuracy
-            cv::TermCriteria criteria(cv::TermCriteria::EPS | cv::TermCriteria::MAX_ITER, 30, 0.001);
-            cv::cornerSubPix(gray, corner_pts, cv::Size(11, 11), cv::Size(-1, -1), criteria);
-
-            cv::Mat rvec, tvec, rotationMatrix;
-            cv::solvePnP(objectPoints, corner_pts, cameraMatrix, distCoeffs, rvec, tvec);
             cv::Rodrigues(rvec, rotationMatrix);
 
             // build modelview matrix
-            GLfloat modelViewMatrix[16] = {
-                (float)rotationMatrix.at<double>(0, 0), (float)-rotationMatrix.at<double>(1, 0), (float)-rotationMatrix.at<double>(2, 0), 0.0f,
-                (float)rotationMatrix.at<double>(0, 1), (float)-rotationMatrix.at<double>(1, 1), (float)-rotationMatrix.at<double>(2, 1), 0.0f,
-                (float)rotationMatrix.at<double>(0, 2), (float)-rotationMatrix.at<double>(1, 2), (float)-rotationMatrix.at<double>(2, 2), 0.0f,
-                (float)tvec.at<double>(0), (float)-tvec.at<double>(1), (float)-tvec.at<double>(2), 1.0f};
+            GLfloat modelViewMatrix[16];
+            std::memset(modelViewMatrix, 0, sizeof(modelViewMatrix));
+
+            // Column 0
+            modelViewMatrix[0] = (float)rotationMatrix.at<double>(0, 0);
+            modelViewMatrix[1] = -(float)rotationMatrix.at<double>(1, 0);
+            modelViewMatrix[2] = -(float)rotationMatrix.at<double>(2, 0);
+            modelViewMatrix[3] = 0.0f;
+
+            // Column 1  (flip Y)
+            modelViewMatrix[4] = (float)rotationMatrix.at<double>(0, 1);
+            modelViewMatrix[5] = -(float)rotationMatrix.at<double>(1, 1);
+            modelViewMatrix[6] = -(float)rotationMatrix.at<double>(2, 1);
+            modelViewMatrix[7] = 0.0f;
+
+            // Column 2  (flip Z)
+            modelViewMatrix[8] = (float)rotationMatrix.at<double>(0, 2);
+            modelViewMatrix[9] = -(float)rotationMatrix.at<double>(1, 2);
+            modelViewMatrix[10] = -(float)rotationMatrix.at<double>(2, 2);
+            modelViewMatrix[11] = 0.0f;
+
+            // Column 3 = translation (flip Y and Z)
+            modelViewMatrix[12] = (float)tvec.at<double>(0);
+            modelViewMatrix[13] = -(float)tvec.at<double>(1);
+            modelViewMatrix[14] = -(float)tvec.at<double>(2);
+            modelViewMatrix[15] = 1.0f;
+
+            // --- b. RENDER (PROJECT POINTS) ---
+            // For a simple test, let's project the 3D axes onto the image.
+            float squareSize = 25.0f;
+
+            std::vector<cv::Point3f> axisPoints;
+            axisPoints.push_back(cv::Point3f(0, 0, 0));               // Origin (for the circle)
+            axisPoints.push_back(cv::Point3f(squareSize * 3, 0, 0));  // X-axis
+            axisPoints.push_back(cv::Point3f(0, squareSize * 3, 0));  // Y-axis
+            axisPoints.push_back(cv::Point3f(0, 0, -squareSize * 3)); // Z-axis
+
+            std::vector<cv::Point2f> image_axes;
+            cv::projectPoints(axisPoints, rvec, tvec, cameraMatrix, distCoeffs, image_axes);
+
+            // Draw the projected axes on the image
+            cv::line(frame, image_axes[0], image_axes[1], cv::Scalar(0, 0, 255), 3); // X-axis in Red
+            cv::line(frame, image_axes[0], image_axes[2], cv::Scalar(0, 255, 0), 3); // Y-axis in Green
+            cv::line(frame, image_axes[0], image_axes[3], cv::Scalar(255, 0, 0), 3); // Z-axis in Blue
+
             // render virtual object
             renderer.drawCube(modelViewMatrix, projectionMatrix);
+        }
+        cv::imshow("AR View", frame);
+        if (cv::waitKey(1) == 27)
+        { // ESC key
+            break;
         }
         // swap buffers and poll events
         glfwSwapBuffers(window);
@@ -120,9 +174,9 @@ void augmentLoop(cv::VideoCapture &capture)
     glfwTerminate();
 }
 
-void initAugmentor(cv::Mat &cameraMatrix, cv::Mat &distCoeffs, std::vector<cv::Point3f> &objectPoints)
+void initAugmentor(cv::Mat &cameraMatrix, cv::Mat &distCoeffs)
 {
-    if (!ar::loadCalibrationData(kCalibrationJson, cameraMatrix, distCoeffs, objectPoints))
+    if (!ar::loadCalibrationData(kCalibrationJson, cameraMatrix, distCoeffs))
     {
         std::cerr << "Unable to read " << kCalibrationJson << std::endl;
     }
