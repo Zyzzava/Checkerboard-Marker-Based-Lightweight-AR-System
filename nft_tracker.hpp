@@ -29,12 +29,8 @@ public:
             return;
         }
 
-        std::cout << "Reference image size: " << refImage.cols << "x" << refImage.rows << std::endl;
-        std::cout << "World size with scale " << scaleFactor << ": "
-                  << refImage.cols * scaleFactor << " x " << refImage.rows * scaleFactor << std::endl;
-
         // 1. Setup ORB Detector
-        detector = cv::ORB::create(2000); // Track 2000 features
+        detector = cv::ORB::create(5000); // Track 5000 features
         matcher = cv::DescriptorMatcher::create("BruteForce-Hamming");
 
         // 2. Analyze the Reference Image
@@ -68,23 +64,23 @@ public:
             return false;
 
         // 2. Match against reference
-        std::vector<cv::DMatch> matches;
-        matcher->match(refDescriptors, currDescriptors, matches);
+        std::vector<std::vector<cv::DMatch>> knn_matches;
+        matcher->knnMatch(refDescriptors, currDescriptors, knn_matches, 2);
 
         // 3. Filter good matches (Simple distance check)
         std::vector<cv::DMatch> goodMatches;
         std::vector<cv::Point3f> goodObjectPoints;
         std::vector<cv::Point2f> goodScenePoints;
 
-        for (const auto &m : matches)
+        const float ratio_thresh = 0.75f;
+        for (const auto &match_pair : knn_matches)
         {
-            if (m.distance < 50.0f)
-            { // Threshold
-              // Crucial: We map the 3D point of the Reference to the 2D point of the Scene
-                goodMatches.push_back(m);
-
-                goodObjectPoints.push_back(refObjectPoints[m.queryIdx]);
-                goodScenePoints.push_back(currKeypoints[m.trainIdx].pt);
+            if (match_pair.size() == 2 && match_pair[0].distance < ratio_thresh * match_pair[1].distance)
+            {
+                // Crucial: We map the 3D point of the Reference to the 2D point of the Scene
+                goodMatches.push_back(match_pair[0]);
+                goodObjectPoints.push_back(refObjectPoints[match_pair[0].queryIdx]);
+                goodScenePoints.push_back(currKeypoints[match_pair[0].trainIdx].pt);
             }
         }
 
@@ -93,20 +89,33 @@ public:
         if (goodScenePoints.size() < 10)
             return false;
 
-        /*
-    // Reference image corners (pixel coordinates)
-    std::vector<cv::Point2f> refCorners = {
-        cv::Point2f(0, 0),
-        cv::Point2f(refImage.cols, 0),
-        cv::Point2f(refImage.cols, refImage.rows),
-        cv::Point2f(0, refImage.rows)};
-
-    // Project corners to scene
-    std::vector<cv::Point2f> sceneCorners;
-    cv::perspectiveTransform(refCorners, sceneCorners, H);
-    */
-
         // Draw the matches visually
+        drawMatches(refImage, refKeypoints, frame, currKeypoints, goodMatches);
+
+        // solvePnPRansac is robust against outliers (bad matches)
+        cv::Mat inlierMask;
+        bool success = cv::solvePnPRansac(goodObjectPoints, goodScenePoints, camMat, dist, rvec, tvec, false, 100, 8.0f, 0.99, inlierMask);
+
+        int inlierCount = cv::countNonZero(inlierMask);
+
+        if (success)
+        {
+            // Reject if too few inliers
+            if (inlierCount < 8)
+            {
+                return false;
+            }
+        }
+
+        return success;
+    }
+
+    void drawMatches(const cv::Mat &refImage,
+                     const std::vector<cv::KeyPoint> &refKeypoints,
+                     const cv::Mat &frame,
+                     const std::vector<cv::KeyPoint> &currKeypoints,
+                     const std::vector<cv::DMatch> &goodMatches)
+    {
         cv::Mat debugImg;
         // Draw only the good matches
         cv::drawMatches(refImage, refKeypoints, frame, currKeypoints,
@@ -117,24 +126,5 @@ public:
 
         cv::imshow("Debug Matches", debugImg); // Creates a pop-up window
         cv::waitKey(1);
-
-        // solvePnPRansac is robust against outliers (bad matches)
-        cv::Mat inlierMask;
-        bool success = cv::solvePnPRansac(goodObjectPoints, goodScenePoints, camMat, dist, rvec, tvec, false, 100, 8.0f, 0.99, inlierMask);
-
-        if (success)
-        {
-            int inlierCount = cv::countNonZero(inlierMask);
-            std::cout << "Total matches: " << goodMatches.size()
-                      << " | RANSAC inliers: " << inlierCount << std::endl;
-
-            // Reject if too few inliers
-            if (inlierCount < 8)
-            {
-                return false;
-            }
-        }
-
-        return success;
     }
 };
