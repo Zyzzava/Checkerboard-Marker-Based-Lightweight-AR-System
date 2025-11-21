@@ -15,13 +15,14 @@ namespace
     const std::filesystem::path kCalibrationJson{"data/calibration/calibration.json"};
 }
 
-void augmentLoop(cv::VideoCapture &capture)
+void augmentLoop(cv::VideoCapture &capture, bool &useNft)
 {
-    bool useNFT = true;
+    float squareSize = 10.0f;     // Set your physical square size here
+    cv::Size patternSize(28, 19); // Number of inner corners per a chessboard row and column
 
     std::unique_ptr<PoseTracker> tracker;
 
-    if (useNFT)
+    if (useNft)
     {
         auto nft = std::make_unique<NFTTracker>("data/reference/reference.png");
         nft->init();
@@ -29,7 +30,7 @@ void augmentLoop(cv::VideoCapture &capture)
     }
     else
     {
-        auto chess = std::make_unique<ChessboardTracker>(cv::Size(8, 6), 25.0f);
+        auto chess = std::make_unique<ChessboardTracker>(patternSize, squareSize);
         chess->init();
         tracker = std::move(chess);
     }
@@ -86,7 +87,6 @@ void augmentLoop(cv::VideoCapture &capture)
     renderer.buildProjectionMatrix(cameraMatrix, frame_width, frame_height, projectionMatrix);
 
     cv::Mat frame;
-    cv::Size patternSize(8, 6);
     cv::Mat rvec, tvec, rotationMatrix;
 
     while (!glfwWindowShouldClose(window))
@@ -141,8 +141,6 @@ void augmentLoop(cv::VideoCapture &capture)
 
             // --- b. RENDER (PROJECT POINTS) ---
             // For a simple test, let's project the 3D axes onto the image.
-            float squareSize = 25.0f;
-
             std::vector<cv::Point3f> axisPoints;
             axisPoints.push_back(cv::Point3f(0, 0, 0));               // Origin (for the circle)
             axisPoints.push_back(cv::Point3f(squareSize * 3, 0, 0));  // X-axis

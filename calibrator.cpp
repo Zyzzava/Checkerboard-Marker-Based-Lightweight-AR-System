@@ -145,4 +145,51 @@ namespace ar
         // Save calibration results
         saveCalibrationData(storageDir, cameraMatrix, distCoeffs, reprojectionError);
     }
+
+    void captureReferenceImage(cv::VideoCapture &capture,
+                               const std::string &outputDir)
+    {
+        // Setup storage directories
+        if (!outputDir.empty())
+        {
+            std::filesystem::create_directories(outputDir);
+        }
+
+        capture.open(0);
+        if (!capture.isOpened())
+        {
+            std::cerr << "Reference image capture requires an open camera.\n";
+            return;
+        }
+        std::string windowName = "Capture Reference Image";
+        cv::namedWindow(windowName, cv::WINDOW_AUTOSIZE);
+
+        cv::Mat frame;
+        while (true)
+        {
+            capture >> frame;
+            if (frame.empty())
+            {
+                continue;
+            }
+
+            cv::imshow(windowName, frame);
+            const int key = cv::waitKey(30);
+
+            if (key == 32) // Space key
+            {
+                std::filesystem::path outPath = std::filesystem::path(outputDir) / "reference.png";
+                cv::imwrite(outPath.string(), frame);
+                std::cout << "Reference image saved to " << outPath << std::endl;
+                break;
+            }
+
+            if (key == 27 || key == 'q') // ESC or q
+            {
+                break;
+            }
+        }
+
+        cv::destroyWindow(windowName);
+    }
 }

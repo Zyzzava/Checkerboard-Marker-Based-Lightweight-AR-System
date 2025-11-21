@@ -2,4 +2,4 @@
 #include <vector>
 
 void initAugmentor(cv::Mat &cameraMatrix, cv::Mat &distCoeffs);
-void augmentLoop(cv::VideoCapture &capture);
+void augmentLoop(cv::VideoCapture &capture, bool &useNft);

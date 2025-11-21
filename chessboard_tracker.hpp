@@ -11,12 +11,14 @@ public:
 
     void init() override
     {
-        // Pre-calculate the 3D positions of the corners
+        objectPoints.clear();
+        float cx = (patternSize.width - 1) * squareSize / 2.0f;
+        float cy = (patternSize.height - 1) * squareSize / 2.0f;
         for (int i = 0; i < patternSize.height; i++)
         {
             for (int j = 0; j < patternSize.width; j++)
             {
-                objectPoints.push_back(cv::Point3f(j * squareSize, i * squareSize, 0));
+                objectPoints.push_back(cv::Point3f(j * squareSize - cx, i * squareSize - cy, 0));
             }
         }
     }
@@ -34,6 +36,11 @@ public:
             // Refine corners (Sub-pixel)
             cv::cornerSubPix(gray, corners, cv::Size(11, 11), cv::Size(-1, -1),
                              cv::TermCriteria(cv::TermCriteria::EPS + cv::TermCriteria::COUNT, 30, 0.1));
+
+            // Draw detected corners for debugging
+            cv::Mat debugImg = frame.clone();
+            cv::drawChessboardCorners(debugImg, patternSize, corners, found);
+            cv::imshow("Chessboard Detection", debugImg);
 
             // Calculate Pose
             cv::solvePnP(objectPoints, corners, camMat, dist, rvec, tvec);

@@ -8,6 +8,8 @@ using namespace ar;
 
 int main()
 {
+    bool useNft = false;
+
     cv::VideoCapture capture;
 
     const std::filesystem::path calibrationJson{"data/calibration/calibration.json"};
@@ -16,7 +18,18 @@ int main()
         calibrateCamera(capture, 15, "calibration");
     }
 
-    augmentLoop(capture);
+    if (useNft)
+    {
+        // if no reference picture
+        if (!std::filesystem::exists("data/reference/reference.png"))
+        {
+            std::cout << "No reference image found for NFT. Capturing one now." << std::endl;
+            // capture and save reference picture
+            captureReferenceImage(capture, "data/reference/");
+        }
+    }
+
+    augmentLoop(capture, useNft);
 
     return 0;
 }
