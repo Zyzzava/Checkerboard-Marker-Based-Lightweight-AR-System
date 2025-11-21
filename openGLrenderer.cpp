@@ -255,13 +255,23 @@ void Renderer::drawCube(const GLfloat *modelViewMatrix, const GLfloat *projectio
     glEnable(GL_DEPTH_TEST);
     glUseProgram(cubeShader);
 
-    // Get uniform locations
-    GLint modelViewLoc = glGetUniformLocation(cubeShader, "modelViewMatrix");
-    GLint projLoc = glGetUniformLocation(cubeShader, "projectionMatrix");
+    // Compute Model-View-Projection (MVP) matrix
+    GLfloat mvpMatrix[16];
+    for (int i = 0; i < 4; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            mvpMatrix[i + j * 4] = 0.0f;
+            for (int k = 0; k < 4; k++)
+            {
+                mvpMatrix[i + j * 4] += projectionMatrix[i + k * 4] * modelViewMatrix[k + j * 4];
+            }
+        }
+    }
 
-    // Pass matrices to the shader
-    glUniformMatrix4fv(modelViewLoc, 1, GL_FALSE, modelViewMatrix);
-    glUniformMatrix4fv(projLoc, 1, GL_FALSE, projectionMatrix);
+    // Get uniform location for MVP
+    GLint mvpLocation = glGetUniformLocation(cubeShader, "mvp");
+    glUniformMatrix4fv(mvpLocation, 1, GL_FALSE, mvpMatrix);
 
     glBindVertexArray(cubeVAO);
     glDrawArrays(GL_TRIANGLES, 0, 36);
