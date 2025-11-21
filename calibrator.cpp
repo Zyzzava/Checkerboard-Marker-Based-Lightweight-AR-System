@@ -6,9 +6,6 @@
 namespace
 {
     // Checkerboard pattern detection flags
-    const cv::Size kPatternSize{8, 6};
-    constexpr int kRequiredSamples = 15;
-    constexpr float kSquareSize = 25.0f;
     const std::string kOutputDir = "calibration";
     const std::string kWindowName = "Checkerboard Calibration";
     const std::filesystem::path kBaseDataDir{"data"};
@@ -45,9 +42,14 @@ namespace
             out << j.dump(4);
         }
     }
+
+    std::string patternSizeToString(const cv::Size &patternSize)
+    {
+        return std::to_string(patternSize.width) + "x" + std::to_string(patternSize.height);
+    }
 }
 
-void drawStatus(cv::Mat &frame, int saved)
+void drawStatus(cv::Mat &frame, int saved, int kRequiredSamples)
 {
     const std::string status = "Samples: " + std::to_string(saved) + " / " + std::to_string(kRequiredSamples);
     cv::putText(frame, status, {10, 25}, cv::FONT_HERSHEY_SIMPLEX, 0.7, {0, 255, 0}, 2);
@@ -57,10 +59,10 @@ void drawStatus(cv::Mat &frame, int saved)
 namespace ar
 {
     void calibrateCamera(cv::VideoCapture &capture, int requiredSamples,
-                         const std::string &outputDir)
+                         const std::string &outputDir, cv::Size patternSize, float squareSize)
     {
         // Setup storage directories
-        const std::filesystem::path storageDir = kBaseDataDir / outputDir;
+        const std::filesystem::path storageDir = kBaseDataDir / outputDir / patternSizeToString(patternSize);
         const std::filesystem::path imageDir = storageDir / "images";
         // Create directories if they do not exist
         std::filesystem::create_directories(imageDir);
@@ -74,11 +76,11 @@ namespace ar
 
         // calculate object points
         std::vector<cv::Point3f> templatePoints;
-        for (int i = 0; i < kPatternSize.height; i++)
+        for (int i = 0; i < patternSize.height; i++)
         {
-            for (int j = 0; j < kPatternSize.width; j++)
+            for (int j = 0; j < patternSize.width; j++)
             {
-                templatePoints.push_back(cv::Point3f(j * kSquareSize, i * kSquareSize, 0));
+                templatePoints.push_back(cv::Point3f(j * squareSize, i * squareSize, 0));
             }
         }
 
@@ -102,10 +104,10 @@ namespace ar
 
             cv::cvtColor(frame, gray, cv::COLOR_BGR2GRAY);
 
-            const bool found = findChessboardCorners(gray, kPatternSize, imagePoints, cv::CALIB_CB_ADAPTIVE_THRESH | cv::CALIB_CB_NORMALIZE_IMAGE);
-            drawStatus(frame, collectedSamples);
+            const bool found = findChessboardCorners(gray, patternSize, imagePoints, cv::CALIB_CB_ADAPTIVE_THRESH | cv::CALIB_CB_NORMALIZE_IMAGE);
+            drawStatus(frame, collectedSamples, requiredSamples);
 
-            cv::drawChessboardCorners(frame, kPatternSize, imagePoints, found);
+            cv::drawChessboardCorners(frame, patternSize, imagePoints, found);
             cv::imshow(kWindowName, frame);
             const int key = cv::waitKey(30);
 

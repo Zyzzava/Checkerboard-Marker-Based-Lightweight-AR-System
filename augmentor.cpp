@@ -10,16 +10,8 @@
 #include "chessboard_tracker.hpp"
 #include "nft_tracker.hpp"
 
-namespace
+void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, float squareSize)
 {
-    const std::filesystem::path kCalibrationJson{"data/calibration/calibration.json"};
-}
-
-void augmentLoop(cv::VideoCapture &capture, bool &useNft)
-{
-    float squareSize = 10.0f;     // Set your physical square size here
-    cv::Size patternSize(28, 19); // Number of inner corners per a chessboard row and column
-
     std::unique_ptr<PoseTracker> tracker;
 
     if (useNft)
@@ -37,7 +29,7 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft)
 
     // load calibration data
     cv::Mat cameraMatrix, distCoeffs;
-    initAugmentor(cameraMatrix, distCoeffs);
+    initAugmentor(cameraMatrix, distCoeffs, patternSize);
     if (cameraMatrix.empty() || distCoeffs.empty())
     {
         std::cerr << "Failed to load calibration data." << std::endl;
@@ -172,10 +164,12 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft)
     glfwTerminate();
 }
 
-void initAugmentor(cv::Mat &cameraMatrix, cv::Mat &distCoeffs)
+void initAugmentor(cv::Mat &cameraMatrix, cv::Mat &distCoeffs, cv::Size patternSize)
 {
-    if (!ar::loadCalibrationData(kCalibrationJson, cameraMatrix, distCoeffs))
+    std::string patternStr = std::to_string(patternSize.width) + "x" + std::to_string(patternSize.height);
+    std::filesystem::path calibrationJson = std::filesystem::path("data/calibration") / patternStr / "calibration.json";
+    if (!ar::loadCalibrationData(calibrationJson, cameraMatrix, distCoeffs))
     {
-        std::cerr << "Unable to read " << kCalibrationJson << std::endl;
+        std::cerr << "Unable to read " << calibrationJson << std::endl;
     }
 }
