@@ -7,6 +7,9 @@ class ChessboardTracker : public PoseTracker
     std::vector<cv::Point3f> objectPoints;
 
 public:
+    // Last corners
+    std::vector<cv::Point2f> lastCorners;
+
     ChessboardTracker(cv::Size size, float sqSize) : patternSize(size), squareSize(sqSize) {}
 
     void init() override
@@ -36,6 +39,7 @@ public:
             // Refine corners (Sub-pixel)
             cv::cornerSubPix(gray, corners, cv::Size(11, 11), cv::Size(-1, -1),
                              cv::TermCriteria(cv::TermCriteria::EPS + cv::TermCriteria::COUNT, 30, 0.1));
+            lastCorners = corners; // Store the detected corners
 
             // Draw detected corners for debugging
             cv::Mat debugImg = frame.clone();
@@ -45,6 +49,10 @@ public:
             // Calculate Pose
             cv::solvePnP(objectPoints, corners, camMat, dist, rvec, tvec);
             return true;
+        }
+        else
+        {
+            lastCorners.clear(); // Clear if not found
         }
         return false;
     }

@@ -8,7 +8,7 @@ using namespace ar;
 
 int main()
 {
-    bool useNft = false;         // Set to true to use NFT, false for chessboard
+    bool useNft = true;          // Set to true to use NFT, false for chessboard
     cv::VideoCapture capture(0); // Open camera here
 
     if (!capture.isOpened())

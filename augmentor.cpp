@@ -30,6 +30,11 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
     // load calibration data
     cv::Mat cameraMatrix, distCoeffs;
     initAugmentor(cameraMatrix, distCoeffs, patternSize);
+
+    // Let's print it for debugging
+    std::cout << "Camera Matrix: " << cameraMatrix << std::endl;
+    std::cout << "Distortion Coefficients: " << distCoeffs << std::endl;
+
     if (cameraMatrix.empty() || distCoeffs.empty())
     {
         std::cerr << "Failed to load calibration data." << std::endl;
@@ -149,6 +154,14 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
 
             // render virtual object
             renderer.drawCube(modelViewMatrix, projectionMatrix);
+        }
+        if (!useNft)
+        {
+            ChessboardTracker *chess = dynamic_cast<ChessboardTracker *>(tracker.get());
+            if (chess && chess->lastCorners.size() == patternSize.width * patternSize.height)
+            {
+                cv::drawChessboardCorners(frame, patternSize, chess->lastCorners, true);
+            }
         }
         cv::imshow("AR View", frame);
         if (cv::waitKey(1) == 27)
