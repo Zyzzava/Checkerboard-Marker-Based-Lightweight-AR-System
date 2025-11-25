@@ -80,22 +80,10 @@ Renderer::Renderer(int width, int height) : screenWidth(width), screenHeight(hei
     backgroundShader = createShaderProgram((shaderDir + "background.vert").c_str(), (shaderDir + "background.frag").c_str());
     float quadVertices[] = {
         // x, y, u, v
-        -1.0f,
-        -1.0f,
-        0.0f,
-        0.0f,
-        1.0f,
-        -1.0f,
-        1.0f,
-        0.0f,
-        -1.0f,
-        1.0f,
-        0.0f,
-        1.0f,
-        1.0f,
-        1.0f,
-        1.0f,
-        1.0f};
+        -1.0f, -1.0f, 0.0f, 0.0f,
+        1.0f, -1.0f, 1.0f, 0.0f,
+        -1.0f, 1.0f, 0.0f, 1.0f,
+        1.0f, 1.0f, 1.0f, 1.0f};
 
     glGenVertexArrays(1, &backgroundVAO);
     glGenBuffers(1, &backgroundVBO);
@@ -103,11 +91,11 @@ Renderer::Renderer(int width, int height) : screenWidth(width), screenHeight(hei
     glBindBuffer(GL_ARRAY_BUFFER, backgroundVBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(quadVertices), &quadVertices, GL_STATIC_DRAW);
 
-    // FIX: Set up Attribute 0 (Position: x, y)
+    // Attribute 0 (Position: x, y)
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void *)0);
     glEnableVertexAttribArray(0);
 
-    // FIX: Set up Attribute 1 (TexCoord: u, v)
+    // Attribute 1 (TexCoord: u, v)
     glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void *)(2 * sizeof(float)));
     glEnableVertexAttribArray(1);
 
@@ -120,48 +108,57 @@ Renderer::Renderer(int width, int height) : screenWidth(width), screenHeight(hei
     // -- SETUP FOR CUBE RENDERING --
     cubeShader = createShaderProgram((shaderDir + "cube.vert").c_str(), (shaderDir + "cube.frag").c_str());
     float cubeVertices[] = {
-        // positions      // colors
-        -25.f, -25.f, -25.f, 1.f, 0.f, 0.f,
-        25.f, -25.f, -25.f, 1.f, 0.f, 0.f,
-        25.f, 25.f, -25.f, 1.f, 0.f, 0.f,
-        25.f, 25.f, -25.f, 1.f, 0.f, 0.f,
-        -25.f, 25.f, -25.f, 1.f, 0.f, 0.f,
-        -25.f, -25.f, -25.f, 1.f, 0.f, 0.f,
-        // all 36 vertices for a cube here with colors
-        -25.f, -25.f, 25.f, 0.f, 1.f, 0.f,
-        25.f, -25.f, 25.f, 0.f, 1.f, 0.f,
-        25.f, 25.f, 25.f, 0.f, 1.f, 0.f,
-        25.f, 25.f, 25.f, 0.f, 1.f, 0.f,
-        -25.f, 25.f, 25.f, 0.f, 1.f, 0.f,
-        -25.f, -25.f, 25.f, 0.f, 1.f, 0.f,
+        // positions            // colors
+        // Dimensions: Width 25, Height 25, Depth 25.
+        // Z range: 0.0f (base) to -25.0f (top)
 
-        -25.f, 25.f, 25.f, 0.f, 0.f, 1.f,
-        -25.f, 25.f, -25.f, 0.f, 0.f, 1.f,
-        -25.f, -25.f, -25.f, 0.f, 0.f, 1.f,
-        -25.f, -25.f, -25.f, 0.f, 0.f, 1.f,
-        -25.f, -25.f, 25.f, 0.f, 0.f, 1.f,
-        -25.f, 25.f, 25.f, 0.f, 0.f, 1.f,
+        // BACK FACE (Top of cube, z = -25.0f)
+        -12.5f, -12.5f, -25.0f, 1.0f, 0.0f, 0.0f,
+        12.5f, -12.5f, -25.0f, 1.0f, 0.0f, 0.0f,
+        12.5f, 12.5f, -25.0f, 1.0f, 0.0f, 0.0f,
+        12.5f, 12.5f, -25.0f, 1.0f, 0.0f, 0.0f,
+        -12.5f, 12.5f, -25.0f, 1.0f, 0.0f, 0.0f,
+        -12.5f, -12.5f, -25.0f, 1.0f, 0.0f, 0.0f,
 
-        25.f, 25.f, 25.f, 1.f, 1.f, 0.f,
-        25.f, 25.f, -25.f, 1.f, 1.f, 0.f,
-        25.f, -25.f, -25.f, 1.f, 1.f, 0.f,
-        25.f, -25.f, -25.f, 1.f, 1.f, 0.f,
-        25.f, -25.f, 25.f, 1.f, 1.f, 0.f,
-        25.f, 25.f, 25.f, 1.f, 1.f, 0.f,
+        // FRONT FACE (Base of cube, touching board, z = 0.0f)
+        -12.5f, -12.5f, 0.0f, 0.0f, 1.0f, 0.0f,
+        12.5f, -12.5f, 0.0f, 0.0f, 1.0f, 0.0f,
+        12.5f, 12.5f, 0.0f, 0.0f, 1.0f, 0.0f,
+        12.5f, 12.5f, 0.0f, 0.0f, 1.0f, 0.0f,
+        -12.5f, 12.5f, 0.0f, 0.0f, 1.0f, 0.0f,
+        -12.5f, -12.5f, 0.0f, 0.0f, 1.0f, 0.0f,
 
-        -25.f, -25.f, -25.f, 1.f, 0.f, 1.f,
-        25.f, -25.f, -25.f, 1.f, 0.f, 1.f,
-        25.f, -25.f, 25.f, 1.f, 0.f, 1.f,
-        25.f, -25.f, 25.f, 1.f, 0.f, 1.f,
-        -25.f, -25.f, 25.f, 1.f, 0.f, 1.f,
-        -25.f, -25.f, -25.f, 1.f, 0.f, 1.f,
+        // LEFT FACE
+        -12.5f, 12.5f, 0.0f, 0.0f, 0.0f, 1.0f,
+        -12.5f, 12.5f, -25.0f, 0.0f, 0.0f, 1.0f,
+        -12.5f, -12.5f, -25.0f, 0.0f, 0.0f, 1.0f,
+        -12.5f, -12.5f, -25.0f, 0.0f, 0.0f, 1.0f,
+        -12.5f, -12.5f, 0.0f, 0.0f, 0.0f, 1.0f,
+        -12.5f, 12.5f, 0.0f, 0.0f, 0.0f, 1.0f,
 
-        -25.f, 25.f, -25.f, 0.f, 1.f, 1.f,
-        25.f, 25.f, -25.f, 0.f, 1.f, 1.f,
-        25.f, 25.f, 25.f, 0.f, 1.f, 1.f,
-        25.f, 25.f, 25.f, 0.f, 1.f, 1.f,
-        -25.f, 25.f, 25.f, 0.f, 1.f, 1.f,
-        -25.f, 25.f, -25.f, 0.f, 1.f, 1.f};
+        // RIGHT FACE
+        12.5f, 12.5f, 0.0f, 1.0f, 1.0f, 0.0f,
+        12.5f, 12.5f, -25.0f, 1.0f, 1.0f, 0.0f,
+        12.5f, -12.5f, -25.0f, 1.0f, 1.0f, 0.0f,
+        12.5f, -12.5f, -25.0f, 1.0f, 1.0f, 0.0f,
+        12.5f, -12.5f, 0.0f, 1.0f, 1.0f, 0.0f,
+        12.5f, 12.5f, 0.0f, 1.0f, 1.0f, 0.0f,
+
+        // BOTTOM FACE
+        -12.5f, -12.5f, -25.0f, 1.0f, 0.0f, 1.0f,
+        12.5f, -12.5f, -25.0f, 1.0f, 0.0f, 1.0f,
+        12.5f, -12.5f, 0.0f, 1.0f, 0.0f, 1.0f,
+        12.5f, -12.5f, 0.0f, 1.0f, 0.0f, 1.0f,
+        -12.5f, -12.5f, 0.0f, 1.0f, 0.0f, 1.0f,
+        -12.5f, -12.5f, -25.0f, 1.0f, 0.0f, 1.0f,
+
+        // TOP FACE
+        -12.5f, 12.5f, -25.0f, 0.0f, 1.0f, 1.0f,
+        12.5f, 12.5f, -25.0f, 0.0f, 1.0f, 1.0f,
+        12.5f, 12.5f, 0.0f, 0.0f, 1.0f, 1.0f,
+        12.5f, 12.5f, 0.0f, 0.0f, 1.0f, 1.0f,
+        -12.5f, 12.5f, 0.0f, 0.0f, 1.0f, 1.0f,
+        -12.5f, 12.5f, -25.0f, 0.0f, 1.0f, 1.0f};
     glGenVertexArrays(1, &cubeVAO);
     glGenBuffers(1, &cubeVBO);
     glBindVertexArray(cubeVAO);
@@ -220,7 +217,7 @@ void Renderer::drawBackground()
 }
 
 // Draw the cube with given modelview and projection matrices
-void Renderer::drawCube(const GLfloat *modelViewMatrix, const GLfloat *projectionMatrix)
+void Renderer::drawCube(const double *modelViewMatrix, const GLfloat *projectionMatrix)
 {
     static int debugFrameCounter = 0;
     if (debugFrameCounter++ % 60 == 0)
@@ -246,27 +243,44 @@ void Renderer::drawCube(const GLfloat *modelViewMatrix, const GLfloat *projectio
         }
 
         // Specific check for Translation (last column of ModelView)
-        float tx = modelViewMatrix[12];
-        float ty = modelViewMatrix[13];
-        float tz = modelViewMatrix[14];
+        double tx = modelViewMatrix[12];
+        double ty = modelViewMatrix[13];
+        double tz = modelViewMatrix[14];
         std::cout << "Translation (Tvec): " << tx << ", " << ty << ", " << tz << std::endl;
     }
 
     glEnable(GL_DEPTH_TEST);
     glUseProgram(cubeShader);
 
-    // Compute Model-View-Projection (MVP) matrix
-    GLfloat mvpMatrix[16];
+    // Use double precision for all matrix math
+    double modelViewMatrixD[16];
+    double projectionMatrixD[16];
+    // Copy input float matrices to double
+    for (int i = 0; i < 16; ++i)
+    {
+        modelViewMatrixD[i] = static_cast<double>(modelViewMatrix[i]);
+        projectionMatrixD[i] = static_cast<double>(projectionMatrix[i]);
+    }
+
+    // Compute Model-View-Projection (MVP) matrix in double
+    double mvpMatrixD[16] = {0};
     for (int i = 0; i < 4; i++)
     {
         for (int j = 0; j < 4; j++)
         {
-            mvpMatrix[i + j * 4] = 0.0f;
+            mvpMatrixD[i + j * 4] = 0.0;
             for (int k = 0; k < 4; k++)
             {
-                mvpMatrix[i + j * 4] += projectionMatrix[i + k * 4] * modelViewMatrix[k + j * 4];
+                mvpMatrixD[i + j * 4] += projectionMatrixD[i + k * 4] * modelViewMatrixD[k + j * 4];
             }
         }
+    }
+
+    // Convert to float only at the last moment
+    GLfloat mvpMatrix[16];
+    for (int i = 0; i < 16; ++i)
+    {
+        mvpMatrix[i] = static_cast<GLfloat>(mvpMatrixD[i]);
     }
 
     // Get uniform location for MVP
@@ -277,39 +291,39 @@ void Renderer::drawCube(const GLfloat *modelViewMatrix, const GLfloat *projectio
     glDrawArrays(GL_TRIANGLES, 0, 36);
 }
 
+void glFrustum(float left, float right, float bottom, float top, float near, float far, GLfloat *projectionMatrix)
+{
+    std::memset(projectionMatrix, 0, 16 * sizeof(GLfloat));
+
+    projectionMatrix[0] = (2.0f * near) / (right - left);
+    projectionMatrix[5] = (2.0f * near) / (top - bottom);
+    projectionMatrix[8] = (right + left) / (right - left);
+    projectionMatrix[9] = (top + bottom) / (top - bottom);
+    projectionMatrix[10] = -(far + near) / (far - near);
+    projectionMatrix[11] = -1.0f;
+    projectionMatrix[14] = -(2.0f * far * near) / (far - near);
+}
+
 void Renderer::buildProjectionMatrix(const cv::Mat &cameraMatrix, int screen_w, int screen_h, GLfloat *projectionMatrix)
 {
     float near = 0.1f;   // Near clipping plane
     float far = 3000.0f; // Far clipping plane
 
     // Extract focal lengths and principal point from camera matrix
-    // focal length in x direction
     float fx = static_cast<float>(cameraMatrix.at<double>(0, 0));
-    // focal length in y direction
     float fy = static_cast<float>(cameraMatrix.at<double>(1, 1));
-    // principal point (optical center) coordinates
     float cx = static_cast<float>(cameraMatrix.at<double>(0, 2));
-    // principal point (optical center) coordinates
     float cy = static_cast<float>(cameraMatrix.at<double>(1, 2));
 
-    // zero out the memory
-    std::memset(projectionMatrix, 0, 16 * sizeof(GLfloat));
+    std::cout << "Camera Intrinsics: fx=" << fx << ", fy=" << fy << ", cx=" << cx << ", cy=" << cy << std::endl;
+    std::cout << "Screen size: " << screen_w << "x" << screen_h << std::endl;
 
-    // 1. Scale X based on focal length
-    projectionMatrix[0] = 2.0f * fx / screen_w;
-    // 2. Scale Y based on focal length
-    projectionMatrix[5] = 2.0f * fy / screen_h;
+    // Calculate frustum boundaries
+    float left = (0 - cx) / fx * near;
+    float right = (screen_w - cx) / fx * near;
+    float bottom = (cy - screen_h) / fy * near; // OpenCV's Y is top-down, OpenGL's is bottom-up
+    float top = cy / fy * near;
 
-    // 3. Center offset (Principal Point)
-    // Maps the camera's optical center to the screen center
-    projectionMatrix[8] = 2.0f * (cx / screen_w) - 1.0f;
-    projectionMatrix[9] = 2.0f * (cy / screen_h) - 1.0f;
-
-    // 4. Depth mapping (Standard OpenGL Perspective)
-    projectionMatrix[10] = -(far + near) / (far - near);
-    projectionMatrix[11] = -1.0f;
-    projectionMatrix[14] = -(2.0f * far * near) / (far - near);
-
-    // 5. Homogeneous coordinate
-    projectionMatrix[15] = 0.0f;
+    // Build the projection matrix using the frustum values
+    glFrustum(left, right, bottom, top, near, far, projectionMatrix);
 }

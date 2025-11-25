@@ -10,7 +10,7 @@ public:
 
     void updateBackground(const cv::Mat &frame);
     void drawBackground();
-    void drawCube(const GLfloat *modelViewMatrix, const GLfloat *projectionMatrix);
+    void drawCube(const double *modelViewMatrix, const GLfloat *projectionMatrix);
     void buildProjectionMatrix(const cv::Mat &cameraMatrix, int screen_w, int screen_h, GLfloat *projectionMatrix);
 
 private:

@@ -49,6 +49,7 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
     }
     int frame_width = static_cast<int>(cap.get(cv::CAP_PROP_FRAME_WIDTH));
     int frame_height = static_cast<int>(cap.get(cv::CAP_PROP_FRAME_HEIGHT));
+    std::cout << "Camera capture size: " << frame_width << "x" << frame_height << std::endl;
 
     // Fail-safe debugging for frame_width and frame_height
     if (frame_width <= 0 || frame_height <= 0)
@@ -95,6 +96,20 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
             std::cerr << "Error: Could not read frame." << std::endl;
             break;
         }
+        // 1. Undistort frame
+        cv::Mat undistortedFrame;
+        cv::undistort(frame, undistortedFrame, cameraMatrix, distCoeffs);
+        frame = undistortedFrame;
+
+        // 2. Create a "Zero" distortion vector for tracking
+        // Since the frame is now undistorted, we treat it as a perfect pinhole camera
+        cv::Mat zeroDist = cv::Mat::zeros(4, 1, cv::DataType<double>::type);
+
+        // Update viewport in case window size != framebuffer size
+        int display_w, display_h;
+        glfwGetFramebufferSize(window, &display_w, &display_h);
+        glViewport(0, 0, display_w, display_h);
+
         // display camera frame as background
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -102,39 +117,40 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
         renderer.updateBackground(frame);
         renderer.drawBackground();
 
-        // estimate pose
-        bool success = tracker->estimatePose(frame, cameraMatrix, distCoeffs, rvec, tvec);
+        // 3. Estimate pose using zeroDist
+        // We use the original cameraMatrix (approximation), but NO distortion
+        bool success = tracker->estimatePose(frame, cameraMatrix, zeroDist, rvec, tvec);
         if (success)
         {
             cv::Rodrigues(rvec, rotationMatrix);
 
             // build modelview matrix
-            GLfloat modelViewMatrix[16];
+            double modelViewMatrix[16];
             std::memset(modelViewMatrix, 0, sizeof(modelViewMatrix));
 
             // Column 0
-            modelViewMatrix[0] = (float)rotationMatrix.at<double>(0, 0);
-            modelViewMatrix[1] = -(float)rotationMatrix.at<double>(1, 0);
-            modelViewMatrix[2] = -(float)rotationMatrix.at<double>(2, 0);
-            modelViewMatrix[3] = 0.0f;
+            modelViewMatrix[0] = (double)rotationMatrix.at<double>(0, 0);
+            modelViewMatrix[1] = -(double)rotationMatrix.at<double>(1, 0);
+            modelViewMatrix[2] = -(double)rotationMatrix.at<double>(2, 0);
+            modelViewMatrix[3] = 0.0;
 
             // Column 1  (flip Y)
-            modelViewMatrix[4] = (float)rotationMatrix.at<double>(0, 1);
-            modelViewMatrix[5] = -(float)rotationMatrix.at<double>(1, 1);
-            modelViewMatrix[6] = -(float)rotationMatrix.at<double>(2, 1);
-            modelViewMatrix[7] = 0.0f;
+            modelViewMatrix[4] = (double)rotationMatrix.at<double>(0, 1);
+            modelViewMatrix[5] = -(double)rotationMatrix.at<double>(1, 1);
+            modelViewMatrix[6] = -(double)rotationMatrix.at<double>(2, 1);
+            modelViewMatrix[7] = 0.0;
 
             // Column 2  (flip Z)
-            modelViewMatrix[8] = (float)rotationMatrix.at<double>(0, 2);
-            modelViewMatrix[9] = -(float)rotationMatrix.at<double>(1, 2);
-            modelViewMatrix[10] = -(float)rotationMatrix.at<double>(2, 2);
-            modelViewMatrix[11] = 0.0f;
+            modelViewMatrix[8] = (double)rotationMatrix.at<double>(0, 2);
+            modelViewMatrix[9] = -(double)rotationMatrix.at<double>(1, 2);
+            modelViewMatrix[10] = -(double)rotationMatrix.at<double>(2, 2);
+            modelViewMatrix[11] = 0.0;
 
             // Column 3 = translation (flip Y and Z)
-            modelViewMatrix[12] = (float)tvec.at<double>(0);
-            modelViewMatrix[13] = -(float)tvec.at<double>(1);
-            modelViewMatrix[14] = -(float)tvec.at<double>(2);
-            modelViewMatrix[15] = 1.0f;
+            modelViewMatrix[12] = (double)tvec.at<double>(0);
+            modelViewMatrix[13] = -(double)tvec.at<double>(1);
+            modelViewMatrix[14] = -(double)tvec.at<double>(2);
+            modelViewMatrix[15] = 1.0;
 
             // --- b. RENDER (PROJECT POINTS) ---
             // For a simple test, let's project the 3D axes onto the image.
@@ -145,6 +161,7 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
             axisPoints.push_back(cv::Point3f(0, 0, -squareSize * 3)); // Z-axis
 
             std::vector<cv::Point2f> image_axes;
+            // Use zeroDist, so lines match with OpenGL render
             cv::projectPoints(axisPoints, rvec, tvec, cameraMatrix, distCoeffs, image_axes);
 
             // Draw the projected axes on the image
