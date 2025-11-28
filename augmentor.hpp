@@ -2,4 +2,4 @@
 #include <vector>
 
 void initAugmentor(cv::Mat &cameraMatrix, cv::Mat &distCoeffs, cv::Size patternSize);
-void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, float squareSize);
+void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, float squareSize, const std::string &experimentName, const std::string &testName);

@@ -9,8 +9,10 @@
 #include "tracker.hpp"
 #include "chessboard_tracker.hpp"
 #include "nft_tracker.hpp"
+#include "statistics.hpp"
+#include <fstream>
 
-void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, float squareSize)
+void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, float squareSize, const std::string &experimentName, const std::string &testName)
 {
     std::unique_ptr<PoseTracker> tracker;
 
@@ -87,8 +89,16 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
     cv::Mat frame;
     cv::Mat rvec, tvec, rotationMatrix;
 
+    // Statistical collection
+    int frameCount = 0;
+    int setCount = 0;
+    const int framesPerSet = 800;
+    SessionStats stats;
+    auto t_start = std::chrono::high_resolution_clock::now();
+
     while (!glfwWindowShouldClose(window))
     {
+        auto frameStart = std::chrono::high_resolution_clock::now();
         // capture frame
         cap >> frame;
         if (frame.empty())
@@ -120,6 +130,7 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
         // 3. Estimate pose using zeroDist
         // We use the original cameraMatrix (approximation), but NO distortion
         bool success = tracker->estimatePose(frame, cameraMatrix, zeroDist, rvec, tvec);
+
         if (success)
         {
             cv::Rodrigues(rvec, rotationMatrix);
@@ -172,6 +183,22 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
             // render virtual object
             renderer.drawCube(modelViewMatrix, projectionMatrix);
         }
+
+        // Statistical collection
+        auto frameEnd = std::chrono::high_resolution_clock::now();
+        double frameTimeMs = std::chrono::duration<double, std::milli>(frameEnd - frameStart).count();
+
+        stats.frames.push_back(FrameStats{
+            frameCount,
+            std::chrono::duration<double>(frameEnd - t_start).count(),
+            success,
+            rvec.clone(), tvec.clone(),
+            frameTimeMs});
+
+        // Increment frame count
+        frameCount++;
+
+        // DEBUGGING
         if (!useNft)
         {
             ChessboardTracker *chess = dynamic_cast<ChessboardTracker *>(tracker.get());
@@ -180,11 +207,59 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
                 cv::drawChessboardCorners(frame, patternSize, chess->lastCorners, true);
             }
         }
+
+        // Draw frame count on the image
+        std::string frameText = "Frame: " + std::to_string(frameCount);
+        cv::putText(
+            frame,
+            frameText,
+            cv::Point(20, 40), // position (x, y)
+            cv::FONT_HERSHEY_SIMPLEX,
+            1.0,                   // font scale
+            cv::Scalar(0, 255, 0), // color (green)
+            2                      // thickness
+        );
+
+        // ESCAPE WINDOW (Press ESC to exit)
         cv::imshow("AR View", frame);
         if (cv::waitKey(1) == 27)
         { // ESC key
             break;
         }
+
+        // Only limit to 800 frames if experiment is "pose_stability"
+        if (experimentName == "pose_stability" && frameCount >= 800)
+        {
+            std::cout << "Reached 800 frames for pose_stability, exiting augmentation loop." << std::endl;
+            break;
+        }
+
+        // For detection_robustness
+        if (experimentName == "detection_robustness" && frameCount >= framesPerSet)
+        {
+            // Build file path for this test
+            std::string statsPath;
+            if (useNft)
+                statsPath = "data/statistics/NFT/" + experimentName + "/session_stats_nft_" + testName + ".json";
+            else
+                statsPath = "data/statistics/Checkerboard/" + experimentName + "/session_stats_checkerboard_" + testName + ".json";
+
+            std::filesystem::create_directories(std::filesystem::path(statsPath).parent_path());
+            std::ofstream out(statsPath);
+            if (out.is_open())
+            {
+                out << stats.toJson().dump(4);
+                out.close();
+                std::cout << "Session statistics for test '" << testName << "' saved to " << statsPath << std::endl;
+            }
+            else
+            {
+                std::cerr << "Unable to open file to save session statistics for test '" << testName << "'." << std::endl;
+            }
+            std::cout << "Completed 800 frames for detection_robustness (" << testName << "), exiting augmentation loop." << std::endl;
+            break;
+        }
+
         // swap buffers and poll events
         glfwSwapBuffers(window);
         glfwPollEvents();
@@ -192,6 +267,29 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
     // cleanup
     glfwDestroyWindow(window);
     glfwTerminate();
+
+    // Only save at the end if testName is empty (i.e., not a detection_robustness test)
+    if (testName.empty())
+    {
+        std::string statsPath;
+        if (useNft)
+            statsPath = "data/statistics/NFT/" + experimentName + "/session_stats_nft.json";
+        else
+            statsPath = "data/statistics/Checkerboard/" + experimentName + "/session_stats_checkerboard.json";
+
+        std::filesystem::create_directories(std::filesystem::path(statsPath).parent_path());
+        std::ofstream out(statsPath);
+        if (out.is_open())
+        {
+            out << stats.toJson().dump(4);
+            out.close();
+            std::cout << "Session statistics saved to " << statsPath << std::endl;
+        }
+        else
+        {
+            std::cerr << "Unable to open file to save session statistics." << std::endl;
+        }
+    }
 }
 
 void initAugmentor(cv::Mat &cameraMatrix, cv::Mat &distCoeffs, cv::Size patternSize)

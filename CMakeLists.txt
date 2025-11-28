@@ -9,7 +9,7 @@ find_package(nlohmann_json REQUIRED)
 find_package(glfw3 3.3 REQUIRED)
 find_package(GLEW REQUIRED)
 
-add_executable(lightweight_ar main.cpp calibrator.cpp augmentor.cpp openGLrenderer.cpp jsonHelper.cpp)
+add_executable(lightweight_ar main.cpp calibrator.cpp augmentor.cpp openGLrenderer.cpp jsonHelper.cpp statistics.cpp)
 
 target_compile_definitions(lightweight_ar PRIVATE PROJECT_ROOT="${CMAKE_SOURCE_DIR}")
 
