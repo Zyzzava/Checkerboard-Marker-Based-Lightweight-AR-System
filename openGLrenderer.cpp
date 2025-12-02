@@ -72,7 +72,7 @@ GLuint Renderer::createShaderProgram(const char *vertPath, const char *fragPath)
 }
 
 // Use the macro defined in CMake
-std::string shaderDir = std::string(PROJECT_ROOT) + "/data/shaders/";
+std::string shaderDir = std::string(PROJECT_ROOT) + "/shaders/";
 
 Renderer::Renderer(int width, int height) : screenWidth(width), screenHeight(height)
 {
