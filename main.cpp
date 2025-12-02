@@ -30,6 +30,8 @@ int main()
         calibrateCamera(capture, requiredSamples, "calibration", patternSize, squareSize);
     }
 
+    // Check for reference image if using NFT
+    // Capture one if not present
     if (useNft)
     {
         if (!std::filesystem::exists("data/reference/reference.png"))
@@ -39,7 +41,9 @@ int main()
         }
     }
 
-    augmentLoop(capture, useNft, patternSize, squareSize, "detection_robustness", "lighting");
+    // Run augmentation loop
+    // Last two parameters are subfolder names for saving results for experiments
+    augmentLoop(capture, useNft, patternSize, squareSize, "detection_robustness", "occlusion");
 
     return 0;
 }

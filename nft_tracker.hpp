@@ -14,7 +14,6 @@ class NFTTracker : public PoseTracker
     cv::Ptr<cv::DescriptorMatcher> matcher;
 
     // Scale factor to convert pixels to "World Units"
-    // e.g., if image is 500px wide, and we want it to appear 50 units wide, scale = 0.1
     float scaleFactor = 0.1f;
 
 public:
@@ -22,6 +21,7 @@ public:
 
     void init() override
     {
+        // Load Reference Image
         refImage = cv::imread(imagePath, cv::IMREAD_GRAYSCALE);
         if (refImage.empty())
         {
@@ -29,18 +29,16 @@ public:
             return;
         }
 
-        // 1. Setup ORB Detector
+        // Setup ORB Detector
         detector = cv::ORB::create(5000); // Track 5000 features
         matcher = cv::DescriptorMatcher::create("BruteForce-Hamming");
 
-        // 2. Analyze the Reference Image
+        // Analyze the Reference Image
         detector->detectAndCompute(refImage, cv::noArray(), refKeypoints, refDescriptors);
 
-        // 3. Create 3D Object Points from 2D Keypoints
-        // We assume the image is flat (Z=0).
+        // Create 3D Object Points from 2D Keypoints
         float centerX = refImage.cols * 0.5f;
         float centerY = refImage.rows * 0.5f;
-
         for (const auto &kp : refKeypoints)
         {
             // Subtract center to make origin at image center
@@ -52,10 +50,11 @@ public:
 
     bool estimatePose(const cv::Mat &frame, const cv::Mat &camMat, const cv::Mat &dist, cv::Mat &rvec, cv::Mat &tvec) override
     {
+        // convert to grayscale
         cv::Mat gray;
         cv::cvtColor(frame, gray, cv::COLOR_BGR2GRAY);
 
-        // 1. Detect features in current frame
+        // Detect features in current frame
         std::vector<cv::KeyPoint> currKeypoints;
         cv::Mat currDescriptors;
         detector->detectAndCompute(gray, cv::noArray(), currKeypoints, currDescriptors);
@@ -63,11 +62,11 @@ public:
         if (currDescriptors.empty())
             return false;
 
-        // 2. Match against reference
+        // Match against reference
         std::vector<std::vector<cv::DMatch>> knn_matches;
         matcher->knnMatch(refDescriptors, currDescriptors, knn_matches, 2);
 
-        // 3. Filter good matches (Simple distance check)
+        // Filter good matches (Simple distance check)
         std::vector<cv::DMatch> goodMatches;
         std::vector<cv::Point3f> goodObjectPoints;
         std::vector<cv::Point2f> goodScenePoints;
@@ -84,15 +83,16 @@ public:
             }
         }
 
-        // 4. RANSAC & PnP
-        // We need at least 4 points to solve PnP, but let's ask for 10 for stability
+        // RANSAC & PnP
+        // We need at least 4 points to solve PnP, but ask for 10 for stability
         if (goodScenePoints.size() < 10)
             return false;
 
         // Draw the matches visually
         drawMatches(refImage, refKeypoints, frame, currKeypoints, goodMatches);
 
-        // solvePnPRansac is robust against outliers (bad matches)
+        // solvePnPRansac is robust against outliers
+        // It will return the inliers used for the final pose estimation
         cv::Mat inlierMask;
         bool success = cv::solvePnPRansac(goodObjectPoints, goodScenePoints, camMat, dist, rvec, tvec, false, 100, 8.0f, 0.99, inlierMask);
 

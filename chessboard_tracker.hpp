@@ -14,6 +14,7 @@ public:
 
     void init() override
     {
+        // Prepare object points based on the chessboard pattern size and square size
         objectPoints.clear();
         float cx = (patternSize.width - 1) * squareSize / 2.0f;
         float cy = (patternSize.height - 1) * squareSize / 2.0f;
@@ -28,9 +29,11 @@ public:
 
     bool estimatePose(const cv::Mat &frame, const cv::Mat &camMat, const cv::Mat &dist, cv::Mat &rvec, cv::Mat &tvec) override
     {
+        // Convert to grayscale
         cv::Mat gray;
         cv::cvtColor(frame, gray, cv::COLOR_BGR2GRAY);
 
+        // Find chessboard corners
         std::vector<cv::Point2f> corners;
         bool found = cv::findChessboardCorners(gray, patternSize, corners, cv::CALIB_CB_ADAPTIVE_THRESH | cv::CALIB_CB_FAST_CHECK | cv::CALIB_CB_NORMALIZE_IMAGE);
 

@@ -8,6 +8,7 @@ const std::string kOutputDir = "calibration";
 const std::string kWindowName = "Checkerboard Calibration";
 const std::filesystem::path kBaseDataDir{"data"};
 
+// Helper to convert cv::Mat to JSON array
 nlohmann::json matToJson(const cv::Mat &mat)
 {
     nlohmann::json rows = nlohmann::json::array();
@@ -23,6 +24,7 @@ nlohmann::json matToJson(const cv::Mat &mat)
     return rows;
 }
 
+// Save calibration data to JSON file
 void saveCalibrationData(const std::filesystem::path &dir,
                          const cv::Mat &cameraMatrix,
                          const cv::Mat &distCoeffs,
@@ -41,11 +43,13 @@ void saveCalibrationData(const std::filesystem::path &dir,
     }
 }
 
+// Helper to convert pattern size to string
 std::string patternSizeToString(const cv::Size &patternSize)
 {
     return std::to_string(patternSize.width) + "x" + std::to_string(patternSize.height);
 }
 
+// Draw calibration status on frame
 void drawStatus(cv::Mat &frame, int saved, int kRequiredSamples)
 {
     const std::string status = "Samples: " + std::to_string(saved) + " / " + std::to_string(kRequiredSamples);
@@ -53,6 +57,7 @@ void drawStatus(cv::Mat &frame, int saved, int kRequiredSamples)
     cv::putText(frame, "Space = save, ESC/q = cancel", {10, 55}, cv::FONT_HERSHEY_SIMPLEX, 0.6, {0, 255, 255}, 1);
 }
 
+// Main calibration function
 void calibrateCamera(cv::VideoCapture &capture, int requiredSamples,
                      const std::string &outputDir, cv::Size patternSize, float squareSize)
 {
@@ -79,16 +84,21 @@ void calibrateCamera(cv::VideoCapture &capture, int requiredSamples,
         }
     }
 
+    // Storage for captured points
     std::vector<cv::Point2f> imagePoints;
+    // All points for all images
     std::vector<std::vector<cv::Point2f>> allImagePoints;
+    // Corresponding object points
     std::vector<std::vector<cv::Point3f>> allObjectPoints;
-
+    // Captured samples counter
     int collectedSamples = 0;
 
+    // Create window
     cv::namedWindow(kWindowName, cv::WINDOW_AUTOSIZE);
-
     cv::Mat frame;
     cv::Mat gray;
+
+    // Capture loop
     while (collectedSamples < requiredSamples)
     {
         capture >> frame;

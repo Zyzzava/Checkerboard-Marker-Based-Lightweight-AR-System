@@ -16,6 +16,7 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
 {
     std::unique_ptr<PoseTracker> tracker;
 
+    // initialize tracker
     if (useNft)
     {
         auto nft = std::make_unique<NFTTracker>("data/reference/reference.png");
@@ -163,7 +164,7 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
             modelViewMatrix[14] = -(double)tvec.at<double>(2);
             modelViewMatrix[15] = 1.0;
 
-            // --- b. RENDER (PROJECT POINTS) ---
+            // --- RENDER ---
             // For a simple test, let's project the 3D axes onto the image.
             std::vector<cv::Point3f> axisPoints;
             axisPoints.push_back(cv::Point3f(0, 0, 0));               // Origin (for the circle)
