@@ -1,0 +1,6423 @@
+{
+    "frames": [
+        {
+            "frame_id": 0,
+            "perf_time_ms": 71.02275,
+            "stab_rot_jitter_rad": 0.0006845987521419278,
+            "stab_trans_jitter": 1.952892599632796,
+            "success": true,
+            "timestamp": 0.071023208
+        },
+        {
+            "frame_id": 1,
+            "perf_time_ms": 73.021666,
+            "stab_rot_jitter_rad": 0.000683511817299653,
+            "stab_trans_jitter": 0.9257184196661751,
+            "success": true,
+            "timestamp": 0.351362291
+        },
+        {
+            "frame_id": 2,
+            "perf_time_ms": 66.023792,
+            "stab_rot_jitter_rad": 0.0007467150972509551,
+            "stab_trans_jitter": 0.4661248467961932,
+            "success": true,
+            "timestamp": 0.45939225
+        },
+        {
+            "frame_id": 3,
+            "perf_time_ms": 34.670875,
+            "stab_rot_jitter_rad": 0.0005473297973177474,
+            "stab_trans_jitter": 0.4596083827138902,
+            "success": true,
+            "timestamp": 0.521517916
+        },
+        {
+            "frame_id": 4,
+            "perf_time_ms": 44.2795,
+            "stab_rot_jitter_rad": 0.0006828223020272083,
+            "stab_trans_jitter": 0.4429527335399665,
+            "success": true,
+            "timestamp": 0.593674
+        },
+        {
+            "frame_id": 5,
+            "perf_time_ms": 54.888666,
+            "stab_rot_jitter_rad": 0.0007267688483008571,
+            "stab_trans_jitter": 0.4308433786898946,
+            "success": true,
+            "timestamp": 0.672342416
+        },
+        {
+            "frame_id": 6,
+            "perf_time_ms": 37.420958,
+            "stab_rot_jitter_rad": 0.0009365784888836306,
+            "stab_trans_jitter": 0.42204439154946016,
+            "success": true,
+            "timestamp": 0.736577166
+        },
+        {
+            "frame_id": 7,
+            "perf_time_ms": 43.501375,
+            "stab_rot_jitter_rad": 0.0008989400181242373,
+            "stab_trans_jitter": 0.42863087367810887,
+            "success": true,
+            "timestamp": 0.804708333
+        },
+        {
+            "frame_id": 8,
+            "perf_time_ms": 33.189542,
+            "stab_rot_jitter_rad": 0.0008273413254643072,
+            "stab_trans_jitter": 0.37231454747687964,
+            "success": true,
+            "timestamp": 0.8660205
+        },
+        {
+            "frame_id": 9,
+            "perf_time_ms": 39.789041,
+            "stab_rot_jitter_rad": 0.0009146178489675526,
+            "stab_trans_jitter": 0.37076662969447843,
+            "success": true,
+            "timestamp": 0.931759291
+        },
+        {
+            "frame_id": 10,
+            "perf_time_ms": 40.24225,
+            "stab_rot_jitter_rad": 0.0005142714765691119,
+            "stab_trans_jitter": 0.38164314434226304,
+            "success": true,
+            "timestamp": 0.998370208
+        },
+        {
+            "frame_id": 11,
+            "perf_time_ms": 39.4755,
+            "stab_rot_jitter_rad": 0.0006759008332241129,
+            "stab_trans_jitter": 0.35618833622895146,
+            "success": true,
+            "timestamp": 1.06083
+        },
+        {
+            "frame_id": 12,
+            "perf_time_ms": 37.974208,
+            "stab_rot_jitter_rad": 0.0008256820990524872,
+            "stab_trans_jitter": 0.34373505350979694,
+            "success": true,
+            "timestamp": 1.121406458
+        },
+        {
+            "frame_id": 13,
+            "perf_time_ms": 51.884,
+            "stab_rot_jitter_rad": 0.0005969066737276718,
+            "stab_trans_jitter": 0.3989958558389125,
+            "success": true,
+            "timestamp": 1.19535325
+        },
+        {
+            "frame_id": 14,
+            "perf_time_ms": 41.581375,
+            "stab_rot_jitter_rad": 0.0007407205693505319,
+            "stab_trans_jitter": 0.4154015883383916,
+            "success": true,
+            "timestamp": 1.261733541
+        },
+        {
+            "frame_id": 15,
+            "perf_time_ms": 43.929,
+            "stab_rot_jitter_rad": 0.0005808435198218358,
+            "stab_trans_jitter": 0.44874883883471905,
+            "success": true,
+            "timestamp": 1.328570458
+        },
+        {
+            "frame_id": 16,
+            "perf_time_ms": 46.752625,
+            "stab_rot_jitter_rad": 0.0006400026693166586,
+            "stab_trans_jitter": 0.4328581001800924,
+            "success": true,
+            "timestamp": 1.397781083
+        },
+        {
+            "frame_id": 17,
+            "perf_time_ms": 39.346167,
+            "stab_rot_jitter_rad": 0.0006575770802103645,
+            "stab_trans_jitter": 0.42355863046312636,
+            "success": true,
+            "timestamp": 1.464420583
+        },
+        {
+            "frame_id": 18,
+            "perf_time_ms": 37.259709,
+            "stab_rot_jitter_rad": 0.0007042658657814372,
+            "stab_trans_jitter": 0.37493449696527226,
+            "success": true,
+            "timestamp": 1.53059175
+        },
+        {
+            "frame_id": 19,
+            "perf_time_ms": 36.570917,
+            "stab_rot_jitter_rad": 0.0005763689938502432,
+            "stab_trans_jitter": 0.4159837392420287,
+            "success": true,
+            "timestamp": 1.596307458
+        },
+        {
+            "frame_id": 20,
+            "perf_time_ms": 32.053291,
+            "stab_rot_jitter_rad": 0.0005466886585674068,
+            "stab_trans_jitter": 0.44009558747477595,
+            "success": true,
+            "timestamp": 1.658693166
+        },
+        {
+            "frame_id": 21,
+            "perf_time_ms": 49.522833,
+            "stab_rot_jitter_rad": 0.0005863613246892754,
+            "stab_trans_jitter": 0.4217958605195291,
+            "success": true,
+            "timestamp": 1.731349791
+        },
+        {
+            "frame_id": 22,
+            "perf_time_ms": 37.815416,
+            "stab_rot_jitter_rad": 0.001545786669342047,
+            "stab_trans_jitter": 0.1717028775078104,
+            "success": true,
+            "timestamp": 1.797446416
+        },
+        {
+            "frame_id": 23,
+            "perf_time_ms": 35.295125,
+            "stab_rot_jitter_rad": 0.0010037553063292697,
+            "stab_trans_jitter": 0.11718130484953236,
+            "success": true,
+            "timestamp": 1.865097625
+        },
+        {
+            "frame_id": 24,
+            "perf_time_ms": 34.566542,
+            "stab_rot_jitter_rad": 0.0009823119507501904,
+            "stab_trans_jitter": 0.14681421602989353,
+            "success": true,
+            "timestamp": 1.927507958
+        },
+        {
+            "frame_id": 25,
+            "perf_time_ms": 43.291208,
+            "stab_rot_jitter_rad": 0.0009331853167989205,
+            "stab_trans_jitter": 0.1313967495083161,
+            "success": true,
+            "timestamp": 1.993887666
+        },
+        {
+            "frame_id": 26,
+            "perf_time_ms": 39.359625,
+            "stab_rot_jitter_rad": 0.0008736346698830846,
+            "stab_trans_jitter": 0.14147419170936337,
+            "success": true,
+            "timestamp": 2.055758041
+        },
+        {
+            "frame_id": 27,
+            "perf_time_ms": 51.827708,
+            "stab_rot_jitter_rad": 0.0009107881833213714,
+            "stab_trans_jitter": 0.1541757242573955,
+            "success": true,
+            "timestamp": 2.129944958
+        },
+        {
+            "frame_id": 28,
+            "perf_time_ms": 44.068875,
+            "stab_rot_jitter_rad": 0.0007297808810294003,
+            "stab_trans_jitter": 0.16165105341299923,
+            "success": true,
+            "timestamp": 2.196204041
+        },
+        {
+            "frame_id": 29,
+            "perf_time_ms": 47.709584,
+            "stab_rot_jitter_rad": 0.0009429852170485637,
+            "stab_trans_jitter": 0.17725478239409362,
+            "success": true,
+            "timestamp": 2.266316875
+        },
+        {
+            "frame_id": 30,
+            "perf_time_ms": 33.142041999999996,
+            "stab_rot_jitter_rad": 0.0009479164697792789,
+            "stab_trans_jitter": 0.19126949717783923,
+            "success": true,
+            "timestamp": 2.326810625
+        },
+        {
+            "frame_id": 31,
+            "perf_time_ms": 43.517875,
+            "stab_rot_jitter_rad": 0.0009869084401072645,
+            "stab_trans_jitter": 0.21481079885425952,
+            "success": true,
+            "timestamp": 2.393423375
+        },
+        {
+            "frame_id": 32,
+            "perf_time_ms": 48.859417,
+            "stab_rot_jitter_rad": 0.0009374769973045798,
+            "stab_trans_jitter": 0.19442265551450078,
+            "success": true,
+            "timestamp": 2.465015458
+        },
+        {
+            "frame_id": 33,
+            "perf_time_ms": 31.652875,
+            "stab_rot_jitter_rad": 0.000965568710147212,
+            "stab_trans_jitter": 0.20846915730484822,
+            "success": true,
+            "timestamp": 2.525843208
+        },
+        {
+            "frame_id": 34,
+            "perf_time_ms": 40.533083,
+            "stab_rot_jitter_rad": 0.0010516854383025567,
+            "stab_trans_jitter": 0.19197760289143997,
+            "success": true,
+            "timestamp": 2.589847166
+        },
+        {
+            "frame_id": 35,
+            "perf_time_ms": 46.65725,
+            "stab_rot_jitter_rad": 0.0010910056719588062,
+            "stab_trans_jitter": 0.1941531433623223,
+            "success": true,
+            "timestamp": 2.662935041
+        },
+        {
+            "frame_id": 36,
+            "perf_time_ms": 45.119667,
+            "stab_rot_jitter_rad": 0.0010281978767889273,
+            "stab_trans_jitter": 0.19732604495947323,
+            "success": true,
+            "timestamp": 2.730261333
+        },
+        {
+            "frame_id": 37,
+            "perf_time_ms": 33.588125,
+            "stab_rot_jitter_rad": 0.001024995376885217,
+            "stab_trans_jitter": 0.220896696217652,
+            "success": true,
+            "timestamp": 2.791893083
+        },
+        {
+            "frame_id": 38,
+            "perf_time_ms": 56.494125,
+            "stab_rot_jitter_rad": 0.0010733671380007313,
+            "stab_trans_jitter": 0.21437691981089008,
+            "success": true,
+            "timestamp": 2.871881333
+        },
+        {
+            "frame_id": 39,
+            "perf_time_ms": 37.839917,
+            "stab_rot_jitter_rad": 0.0010145060402922625,
+            "stab_trans_jitter": 0.1815104401228814,
+            "success": true,
+            "timestamp": 2.93166425
+        },
+        {
+            "frame_id": 40,
+            "perf_time_ms": 36.13775,
+            "stab_rot_jitter_rad": 0.0007961385988989374,
+            "stab_trans_jitter": 0.15484872257372115,
+            "success": true,
+            "timestamp": 2.994428083
+        },
+        {
+            "frame_id": 41,
+            "perf_time_ms": 47.3765,
+            "stab_rot_jitter_rad": 0.0007382134466685758,
+            "stab_trans_jitter": 0.16711726898203377,
+            "success": true,
+            "timestamp": 3.064202958
+        },
+        {
+            "frame_id": 42,
+            "perf_time_ms": 35.36525,
+            "stab_rot_jitter_rad": 0.0007586804929758741,
+            "stab_trans_jitter": 0.1981120369739005,
+            "success": true,
+            "timestamp": 3.127122625
+        },
+        {
+            "frame_id": 43,
+            "perf_time_ms": 50.883709,
+            "stab_rot_jitter_rad": 0.0007053801421449803,
+            "stab_trans_jitter": 0.1926925153880058,
+            "success": true,
+            "timestamp": 3.200487625
+        },
+        {
+            "frame_id": 44,
+            "perf_time_ms": 32.152,
+            "stab_rot_jitter_rad": 0.000584934416770191,
+            "stab_trans_jitter": 0.1910368785148334,
+            "success": true,
+            "timestamp": 3.258378583
+        },
+        {
+            "frame_id": 45,
+            "perf_time_ms": 52.01525,
+            "stab_rot_jitter_rad": 0.000517097060035869,
+            "stab_trans_jitter": 0.18916320227565228,
+            "success": true,
+            "timestamp": 3.332937166
+        },
+        {
+            "frame_id": 46,
+            "perf_time_ms": 39.310166,
+            "stab_rot_jitter_rad": 0.0006140269080755241,
+            "stab_trans_jitter": 0.20075842305348227,
+            "success": true,
+            "timestamp": 3.398526791
+        },
+        {
+            "frame_id": 47,
+            "perf_time_ms": 38.4325,
+            "stab_rot_jitter_rad": 0.0007052995841360091,
+            "stab_trans_jitter": 0.23510925550174658,
+            "success": true,
+            "timestamp": 3.463696208
+        },
+        {
+            "frame_id": 48,
+            "perf_time_ms": 42.95275,
+            "stab_rot_jitter_rad": 0.0007913460206567592,
+            "stab_trans_jitter": 0.25304227354978404,
+            "success": true,
+            "timestamp": 3.529105708
+        },
+        {
+            "frame_id": 49,
+            "perf_time_ms": 48.579291,
+            "stab_rot_jitter_rad": 0.0009130919423985788,
+            "stab_trans_jitter": 0.20551853773829368,
+            "success": true,
+            "timestamp": 3.599807541
+        },
+        {
+            "frame_id": 50,
+            "perf_time_ms": 40.50875,
+            "stab_rot_jitter_rad": 0.0010938811828104203,
+            "stab_trans_jitter": 0.2572294002805858,
+            "success": true,
+            "timestamp": 3.666031625
+        },
+        {
+            "frame_id": 51,
+            "perf_time_ms": 36.335375,
+            "stab_rot_jitter_rad": 0.0010428853936626026,
+            "stab_trans_jitter": 0.2884366111827005,
+            "success": true,
+            "timestamp": 3.728479041
+        },
+        {
+            "frame_id": 52,
+            "perf_time_ms": 46.149958,
+            "stab_rot_jitter_rad": 0.001020836835982796,
+            "stab_trans_jitter": 0.2884559033131982,
+            "success": true,
+            "timestamp": 3.796876791
+        },
+        {
+            "frame_id": 53,
+            "perf_time_ms": 47.39975,
+            "stab_rot_jitter_rad": 0.0009797698418336455,
+            "stab_trans_jitter": 0.281434498093292,
+            "success": true,
+            "timestamp": 3.866504541
+        },
+        {
+            "frame_id": 54,
+            "perf_time_ms": 38.202291,
+            "stab_rot_jitter_rad": 0.000964954620194034,
+            "stab_trans_jitter": 0.2902699896116114,
+            "success": true,
+            "timestamp": 3.930332291
+        },
+        {
+            "frame_id": 55,
+            "perf_time_ms": 43.498833,
+            "stab_rot_jitter_rad": 0.0008883704448110192,
+            "stab_trans_jitter": 0.2537107598908267,
+            "success": true,
+            "timestamp": 3.995950208
+        },
+        {
+            "frame_id": 56,
+            "perf_time_ms": 50.654333,
+            "stab_rot_jitter_rad": 0.0009241003822865062,
+            "stab_trans_jitter": 0.2700570391856617,
+            "success": true,
+            "timestamp": 4.069341291
+        },
+        {
+            "frame_id": 57,
+            "perf_time_ms": 39.663583,
+            "stab_rot_jitter_rad": 0.0008948207500142436,
+            "stab_trans_jitter": 0.2667493766169213,
+            "success": true,
+            "timestamp": 4.132697541
+        },
+        {
+            "frame_id": 58,
+            "perf_time_ms": 37.109833,
+            "stab_rot_jitter_rad": 0.0008618016858813587,
+            "stab_trans_jitter": 0.25307781458342443,
+            "success": true,
+            "timestamp": 4.195211583
+        },
+        {
+            "frame_id": 59,
+            "perf_time_ms": 46.141958,
+            "stab_rot_jitter_rad": 0.0007920328303844541,
+            "stab_trans_jitter": 0.2809641277701847,
+            "success": true,
+            "timestamp": 4.262919166
+        },
+        {
+            "frame_id": 60,
+            "perf_time_ms": 43.486916,
+            "stab_rot_jitter_rad": 0.000862490311770272,
+            "stab_trans_jitter": 0.25000724827010784,
+            "success": true,
+            "timestamp": 4.329656916
+        },
+        {
+            "frame_id": 61,
+            "perf_time_ms": 47.872084,
+            "stab_rot_jitter_rad": 0.0008507134464827553,
+            "stab_trans_jitter": 0.26903948653495996,
+            "success": true,
+            "timestamp": 4.39980025
+        },
+        {
+            "frame_id": 62,
+            "perf_time_ms": 36.90425,
+            "stab_rot_jitter_rad": 0.000996761096643553,
+            "stab_trans_jitter": 0.29981443822148157,
+            "success": true,
+            "timestamp": 4.461888416
+        },
+        {
+            "frame_id": 63,
+            "perf_time_ms": 45.462167,
+            "stab_rot_jitter_rad": 0.0008642909258240174,
+            "stab_trans_jitter": 0.2794895341210366,
+            "success": true,
+            "timestamp": 4.530095125
+        },
+        {
+            "frame_id": 64,
+            "perf_time_ms": 47.878083,
+            "stab_rot_jitter_rad": 0.0009110422691701682,
+            "stab_trans_jitter": 0.28958189458425504,
+            "success": true,
+            "timestamp": 4.599985791
+        },
+        {
+            "frame_id": 65,
+            "perf_time_ms": 37.532792,
+            "stab_rot_jitter_rad": 0.0007807390612672241,
+            "stab_trans_jitter": 0.2530287041063913,
+            "success": true,
+            "timestamp": 4.662779333
+        },
+        {
+            "frame_id": 66,
+            "perf_time_ms": 42.766375,
+            "stab_rot_jitter_rad": 0.0005520723906449765,
+            "stab_trans_jitter": 0.23056806257490575,
+            "success": true,
+            "timestamp": 4.727932041
+        },
+        {
+            "frame_id": 67,
+            "perf_time_ms": 46.722416,
+            "stab_rot_jitter_rad": 0.0005858525363579227,
+            "stab_trans_jitter": 0.22376379669971092,
+            "success": true,
+            "timestamp": 4.797264166
+        },
+        {
+            "frame_id": 68,
+            "perf_time_ms": 45.802667,
+            "stab_rot_jitter_rad": 0.0005032325011173879,
+            "stab_trans_jitter": 0.22091141871569775,
+            "success": true,
+            "timestamp": 4.865723375
+        },
+        {
+            "frame_id": 69,
+            "perf_time_ms": 42.37375,
+            "stab_rot_jitter_rad": 0.0003448572072442549,
+            "stab_trans_jitter": 0.1904458286885237,
+            "success": true,
+            "timestamp": 4.9303205
+        },
+        {
+            "frame_id": 70,
+            "perf_time_ms": 48.8145,
+            "stab_rot_jitter_rad": 0.000846478701627337,
+            "stab_trans_jitter": 0.24093940485660917,
+            "success": true,
+            "timestamp": 5.00192175
+        },
+        {
+            "frame_id": 71,
+            "perf_time_ms": 37.936875,
+            "stab_rot_jitter_rad": 0.000762817604148533,
+            "stab_trans_jitter": 0.251759504367798,
+            "success": true,
+            "timestamp": 5.063011416
+        },
+        {
+            "frame_id": 72,
+            "perf_time_ms": 45.209542,
+            "stab_rot_jitter_rad": 0.0006147841659201091,
+            "stab_trans_jitter": 0.2129527623397021,
+            "success": true,
+            "timestamp": 5.130095583
+        },
+        {
+            "frame_id": 73,
+            "perf_time_ms": 50.975083,
+            "stab_rot_jitter_rad": 0.0005698935704449702,
+            "stab_trans_jitter": 0.20620116871417005,
+            "success": true,
+            "timestamp": 5.203520708
+        },
+        {
+            "frame_id": 74,
+            "perf_time_ms": 29.727709,
+            "stab_rot_jitter_rad": 0.0005873112717911093,
+            "stab_trans_jitter": 0.2050431825471869,
+            "success": true,
+            "timestamp": 5.2593705
+        },
+        {
+            "frame_id": 75,
+            "perf_time_ms": 45.248583000000004,
+            "stab_rot_jitter_rad": 0.0005164109778054428,
+            "stab_trans_jitter": 0.18339972134443555,
+            "success": true,
+            "timestamp": 5.327079291
+        },
+        {
+            "frame_id": 76,
+            "perf_time_ms": 42.592375,
+            "stab_rot_jitter_rad": 0.00046691619482063,
+            "stab_trans_jitter": 0.16081634377390233,
+            "success": true,
+            "timestamp": 5.392129833
+        },
+        {
+            "frame_id": 77,
+            "perf_time_ms": 49.691583,
+            "stab_rot_jitter_rad": 0.0004846065725008457,
+            "stab_trans_jitter": 0.1780082630315758,
+            "success": true,
+            "timestamp": 5.464928208
+        },
+        {
+            "frame_id": 78,
+            "perf_time_ms": 43.614041,
+            "stab_rot_jitter_rad": 0.0005168922662165322,
+            "stab_trans_jitter": 0.20191957413239012,
+            "success": true,
+            "timestamp": 5.531384166
+        },
+        {
+            "frame_id": 79,
+            "perf_time_ms": 39.830958,
+            "stab_rot_jitter_rad": 0.0005819392758086771,
+            "stab_trans_jitter": 0.23236308161112873,
+            "success": true,
+            "timestamp": 5.594124708
+        },
+        {
+            "frame_id": 80,
+            "perf_time_ms": 52.762042,
+            "stab_rot_jitter_rad": 0.00045913459337719486,
+            "stab_trans_jitter": 0.23543040792771835,
+            "success": true,
+            "timestamp": 5.669290458
+        },
+        {
+            "frame_id": 81,
+            "perf_time_ms": 36.023583,
+            "stab_rot_jitter_rad": 0.0007863325332788696,
+            "stab_trans_jitter": 0.2750902090257759,
+            "success": true,
+            "timestamp": 5.729650083
+        },
+        {
+            "frame_id": 82,
+            "perf_time_ms": 47.622166,
+            "stab_rot_jitter_rad": 0.016187487771917374,
+            "stab_trans_jitter": 0.5464137094233247,
+            "success": true,
+            "timestamp": 5.799846166
+        },
+        {
+            "frame_id": 83,
+            "perf_time_ms": 40.094209,
+            "stab_rot_jitter_rad": 0.016542467173359797,
+            "stab_trans_jitter": 0.5821123353544937,
+            "success": true,
+            "timestamp": 5.861909875
+        },
+        {
+            "frame_id": 84,
+            "perf_time_ms": 45.121,
+            "stab_rot_jitter_rad": 0.02789257099373135,
+            "stab_trans_jitter": 1.0053372515625312,
+            "success": true,
+            "timestamp": 5.929591166
+        },
+        {
+            "frame_id": 85,
+            "perf_time_ms": 585.626458,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 6.537067333
+        },
+        {
+            "frame_id": 86,
+            "perf_time_ms": 570.7625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 7.125230375
+        },
+        {
+            "frame_id": 87,
+            "perf_time_ms": 590.586625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 7.738033375
+        },
+        {
+            "frame_id": 88,
+            "perf_time_ms": 557.232917,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 8.314005625
+        },
+        {
+            "frame_id": 89,
+            "perf_time_ms": 546.708125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 8.87795225
+        },
+        {
+            "frame_id": 90,
+            "perf_time_ms": 557.09425,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 9.454917375
+        },
+        {
+            "frame_id": 91,
+            "perf_time_ms": 583.938375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 10.057235958
+        },
+        {
+            "frame_id": 92,
+            "perf_time_ms": 592.990333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 10.668342708
+        },
+        {
+            "frame_id": 93,
+            "perf_time_ms": 561.929875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 11.248915833
+        },
+        {
+            "frame_id": 94,
+            "perf_time_ms": 551.88175,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 11.819634833
+        },
+        {
+            "frame_id": 95,
+            "perf_time_ms": 551.937375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 12.38865575
+        },
+        {
+            "frame_id": 96,
+            "perf_time_ms": 586.930625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 12.992919458
+        },
+        {
+            "frame_id": 97,
+            "perf_time_ms": 585.245417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 13.596687375
+        },
+        {
+            "frame_id": 98,
+            "perf_time_ms": 568.291167,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 14.185157958
+        },
+        {
+            "frame_id": 99,
+            "perf_time_ms": 582.512833,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 14.785878958
+        },
+        {
+            "frame_id": 100,
+            "perf_time_ms": 552.071916,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 15.356887916
+        },
+        {
+            "frame_id": 101,
+            "perf_time_ms": 520.327917,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 15.894474208
+        },
+        {
+            "frame_id": 102,
+            "perf_time_ms": 459.648833,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 16.371559416
+        },
+        {
+            "frame_id": 103,
+            "perf_time_ms": 529.010917,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 16.91744875
+        },
+        {
+            "frame_id": 104,
+            "perf_time_ms": 513.789416,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 17.450486291
+        },
+        {
+            "frame_id": 105,
+            "perf_time_ms": 540.842459,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 18.0124545
+        },
+        {
+            "frame_id": 106,
+            "perf_time_ms": 514.339958,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 18.545626166
+        },
+        {
+            "frame_id": 107,
+            "perf_time_ms": 501.1935,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 19.064307375
+        },
+        {
+            "frame_id": 108,
+            "perf_time_ms": 528.427167,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 19.611586375
+        },
+        {
+            "frame_id": 109,
+            "perf_time_ms": 547.469125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 20.176262875
+        },
+        {
+            "frame_id": 110,
+            "perf_time_ms": 553.18075,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 20.746805208
+        },
+        {
+            "frame_id": 111,
+            "perf_time_ms": 546.710833,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 21.312096708
+        },
+        {
+            "frame_id": 112,
+            "perf_time_ms": 550.835708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 21.881636083
+        },
+        {
+            "frame_id": 113,
+            "perf_time_ms": 553.027292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 22.451738625
+        },
+        {
+            "frame_id": 114,
+            "perf_time_ms": 543.318209,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 23.012857
+        },
+        {
+            "frame_id": 115,
+            "perf_time_ms": 547.069625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 23.579006125
+        },
+        {
+            "frame_id": 116,
+            "perf_time_ms": 546.283292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 24.142765125
+        },
+        {
+            "frame_id": 117,
+            "perf_time_ms": 564.712333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 24.724800791
+        },
+        {
+            "frame_id": 118,
+            "perf_time_ms": 573.1165,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 25.317179125
+        },
+        {
+            "frame_id": 119,
+            "perf_time_ms": 533.327667,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 25.869322583
+        },
+        {
+            "frame_id": 120,
+            "perf_time_ms": 561.347125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 26.4478055
+        },
+        {
+            "frame_id": 121,
+            "perf_time_ms": 541.773667,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 27.006979583
+        },
+        {
+            "frame_id": 122,
+            "perf_time_ms": 499.421291,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 27.528135416
+        },
+        {
+            "frame_id": 123,
+            "perf_time_ms": 562.986666,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 28.109722416
+        },
+        {
+            "frame_id": 124,
+            "perf_time_ms": 553.939459,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 28.683692
+        },
+        {
+            "frame_id": 125,
+            "perf_time_ms": 550.215875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 29.251039625
+        },
+        {
+            "frame_id": 126,
+            "perf_time_ms": 540.283542,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 29.810948125
+        },
+        {
+            "frame_id": 127,
+            "perf_time_ms": 553.875083,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 30.385717583
+        },
+        {
+            "frame_id": 128,
+            "perf_time_ms": 552.988042,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 30.955999583
+        },
+        {
+            "frame_id": 129,
+            "perf_time_ms": 547.189625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 31.520685875
+        },
+        {
+            "frame_id": 130,
+            "perf_time_ms": 537.048041,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 32.076674666
+        },
+        {
+            "frame_id": 131,
+            "perf_time_ms": 556.446166,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 32.656482541
+        },
+        {
+            "frame_id": 132,
+            "perf_time_ms": 572.367416,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 33.246285916
+        },
+        {
+            "frame_id": 133,
+            "perf_time_ms": 514.582584,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 33.781465375
+        },
+        {
+            "frame_id": 134,
+            "perf_time_ms": 525.602084,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 34.325708625
+        },
+        {
+            "frame_id": 135,
+            "perf_time_ms": 484.191667,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 34.827766958
+        },
+        {
+            "frame_id": 136,
+            "perf_time_ms": 503.872583,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 35.348893958
+        },
+        {
+            "frame_id": 137,
+            "perf_time_ms": 539.392791,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 35.911745916
+        },
+        {
+            "frame_id": 138,
+            "perf_time_ms": 521.269458,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 36.450296416
+        },
+        {
+            "frame_id": 139,
+            "perf_time_ms": 447.745875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 36.915735625
+        },
+        {
+            "frame_id": 140,
+            "perf_time_ms": 489.057959,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 37.425429375
+        },
+        {
+            "frame_id": 141,
+            "perf_time_ms": 545.933916,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 37.988928666
+        },
+        {
+            "frame_id": 142,
+            "perf_time_ms": 550.023208,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 38.556160583
+        },
+        {
+            "frame_id": 143,
+            "perf_time_ms": 537.66225,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 39.112153708
+        },
+        {
+            "frame_id": 144,
+            "perf_time_ms": 558.552708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 39.689784291
+        },
+        {
+            "frame_id": 145,
+            "perf_time_ms": 547.476667,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 40.254770875
+        },
+        {
+            "frame_id": 146,
+            "perf_time_ms": 537.652084,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 40.812081375
+        },
+        {
+            "frame_id": 147,
+            "perf_time_ms": 522.593292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 41.353987208
+        },
+        {
+            "frame_id": 148,
+            "perf_time_ms": 542.369459,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 41.91724975
+        },
+        {
+            "frame_id": 149,
+            "perf_time_ms": 543.071625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 42.487646125
+        },
+        {
+            "frame_id": 150,
+            "perf_time_ms": 538.261875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 43.046365125
+        },
+        {
+            "frame_id": 151,
+            "perf_time_ms": 539.374375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 43.603171041
+        },
+        {
+            "frame_id": 152,
+            "perf_time_ms": 564.334791,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 44.190640416
+        },
+        {
+            "frame_id": 153,
+            "perf_time_ms": 500.78625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 44.710373166
+        },
+        {
+            "frame_id": 154,
+            "perf_time_ms": 520.73025,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 45.248491541
+        },
+        {
+            "frame_id": 155,
+            "perf_time_ms": 556.018959,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 45.8218075
+        },
+        {
+            "frame_id": 156,
+            "perf_time_ms": 554.222959,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 46.39842675
+        },
+        {
+            "frame_id": 157,
+            "perf_time_ms": 523.078125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 46.940356125
+        },
+        {
+            "frame_id": 158,
+            "perf_time_ms": 554.460959,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 47.516256625
+        },
+        {
+            "frame_id": 159,
+            "perf_time_ms": 551.3335,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 48.084975458
+        },
+        {
+            "frame_id": 160,
+            "perf_time_ms": 553.180166,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 48.656546041
+        },
+        {
+            "frame_id": 161,
+            "perf_time_ms": 548.759584,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 49.22402975
+        },
+        {
+            "frame_id": 162,
+            "perf_time_ms": 530.885166,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 49.776653041
+        },
+        {
+            "frame_id": 163,
+            "perf_time_ms": 447.456792,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 50.245378625
+        },
+        {
+            "frame_id": 164,
+            "perf_time_ms": 434.928834,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 50.69953725
+        },
+        {
+            "frame_id": 165,
+            "perf_time_ms": 553.193041,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 51.271085416
+        },
+        {
+            "frame_id": 166,
+            "perf_time_ms": 572.32825,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 51.86096825
+        },
+        {
+            "frame_id": 167,
+            "perf_time_ms": 565.206958,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 52.450072041
+        },
+        {
+            "frame_id": 168,
+            "perf_time_ms": 598.305375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 53.067021166
+        },
+        {
+            "frame_id": 169,
+            "perf_time_ms": 564.536625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 53.65081325
+        },
+        {
+            "frame_id": 170,
+            "perf_time_ms": 533.249667,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 54.20264125
+        },
+        {
+            "frame_id": 171,
+            "perf_time_ms": 553.345625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 54.774595666
+        },
+        {
+            "frame_id": 172,
+            "perf_time_ms": 565.586541,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 55.357835791
+        },
+        {
+            "frame_id": 173,
+            "perf_time_ms": 541.985042,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 55.918257625
+        },
+        {
+            "frame_id": 174,
+            "perf_time_ms": 543.840375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 56.481071708
+        },
+        {
+            "frame_id": 175,
+            "perf_time_ms": 593.076,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 57.096563583
+        },
+        {
+            "frame_id": 176,
+            "perf_time_ms": 621.777542,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 57.74147225
+        },
+        {
+            "frame_id": 177,
+            "perf_time_ms": 552.511667,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 58.312679833
+        },
+        {
+            "frame_id": 178,
+            "perf_time_ms": 529.000709,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 58.85975
+        },
+        {
+            "frame_id": 179,
+            "perf_time_ms": 573.518708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 59.450681416
+        },
+        {
+            "frame_id": 180,
+            "perf_time_ms": 591.660541,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 60.063544541
+        },
+        {
+            "frame_id": 181,
+            "perf_time_ms": 635.300042,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 60.71823075
+        },
+        {
+            "frame_id": 182,
+            "perf_time_ms": 591.615958,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 61.332373041
+        },
+        {
+            "frame_id": 183,
+            "perf_time_ms": 565.746208,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 61.916442791
+        },
+        {
+            "frame_id": 184,
+            "perf_time_ms": 555.1845,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 62.489901833
+        },
+        {
+            "frame_id": 185,
+            "perf_time_ms": 542.182459,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 63.052092875
+        },
+        {
+            "frame_id": 186,
+            "perf_time_ms": 558.430084,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 63.62777775
+        },
+        {
+            "frame_id": 187,
+            "perf_time_ms": 537.592959,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 64.182556875
+        },
+        {
+            "frame_id": 188,
+            "perf_time_ms": 550.658209,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 64.751600125
+        },
+        {
+            "frame_id": 189,
+            "perf_time_ms": 549.202958,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 65.318549416
+        },
+        {
+            "frame_id": 190,
+            "perf_time_ms": 548.755791,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 65.88447291600001
+        },
+        {
+            "frame_id": 191,
+            "perf_time_ms": 550.372208,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 66.452249583
+        },
+        {
+            "frame_id": 192,
+            "perf_time_ms": 540.326125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 67.011174333
+        },
+        {
+            "frame_id": 193,
+            "perf_time_ms": 614.57275,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 67.643378875
+        },
+        {
+            "frame_id": 194,
+            "perf_time_ms": 547.936542,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 68.211045625
+        },
+        {
+            "frame_id": 195,
+            "perf_time_ms": 550.643333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 68.780687833
+        },
+        {
+            "frame_id": 196,
+            "perf_time_ms": 603.256833,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 69.401792041
+        },
+        {
+            "frame_id": 197,
+            "perf_time_ms": 648.355583,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 70.066880458
+        },
+        {
+            "frame_id": 198,
+            "perf_time_ms": 631.073166,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 70.716370291
+        },
+        {
+            "frame_id": 199,
+            "perf_time_ms": 613.458,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 71.348333208
+        },
+        {
+            "frame_id": 200,
+            "perf_time_ms": 549.0125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 71.916119916
+        },
+        {
+            "frame_id": 201,
+            "perf_time_ms": 553.233834,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 72.486432375
+        },
+        {
+            "frame_id": 202,
+            "perf_time_ms": 606.757125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 73.111755125
+        },
+        {
+            "frame_id": 203,
+            "perf_time_ms": 552.193541,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 73.686091541
+        },
+        {
+            "frame_id": 204,
+            "perf_time_ms": 600.287833,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 74.304831916
+        },
+        {
+            "frame_id": 205,
+            "perf_time_ms": 555.738041,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 74.879312416
+        },
+        {
+            "frame_id": 206,
+            "perf_time_ms": 549.903667,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 75.451848
+        },
+        {
+            "frame_id": 207,
+            "perf_time_ms": 549.277541,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 76.019109416
+        },
+        {
+            "frame_id": 208,
+            "perf_time_ms": 546.148417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 76.583958083
+        },
+        {
+            "frame_id": 209,
+            "perf_time_ms": 595.259167,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 77.201150125
+        },
+        {
+            "frame_id": 210,
+            "perf_time_ms": 572.956917,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 77.795723333
+        },
+        {
+            "frame_id": 211,
+            "perf_time_ms": 486.799042,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 78.308281375
+        },
+        {
+            "frame_id": 212,
+            "perf_time_ms": 506.461041,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 78.847614666
+        },
+        {
+            "frame_id": 213,
+            "perf_time_ms": 501.904708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 79.369455583
+        },
+        {
+            "frame_id": 214,
+            "perf_time_ms": 608.197833,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 79.998921958
+        },
+        {
+            "frame_id": 215,
+            "perf_time_ms": 572.493625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 80.592368875
+        },
+        {
+            "frame_id": 216,
+            "perf_time_ms": 520.044083,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 81.130772791
+        },
+        {
+            "frame_id": 217,
+            "perf_time_ms": 599.606334,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 81.748626875
+        },
+        {
+            "frame_id": 218,
+            "perf_time_ms": 574.105334,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 82.3407345
+        },
+        {
+            "frame_id": 219,
+            "perf_time_ms": 578.118,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 82.939178791
+        },
+        {
+            "frame_id": 220,
+            "perf_time_ms": 582.354541,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 83.544014291
+        },
+        {
+            "frame_id": 221,
+            "perf_time_ms": 554.585833,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 84.117326541
+        },
+        {
+            "frame_id": 222,
+            "perf_time_ms": 524.232083,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 84.660047291
+        },
+        {
+            "frame_id": 223,
+            "perf_time_ms": 472.822959,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 85.15139475
+        },
+        {
+            "frame_id": 224,
+            "perf_time_ms": 439.605042,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 85.608174458
+        },
+        {
+            "frame_id": 225,
+            "perf_time_ms": 485.679875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 86.115250583
+        },
+        {
+            "frame_id": 226,
+            "perf_time_ms": 415.866417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 86.548874625
+        },
+        {
+            "frame_id": 227,
+            "perf_time_ms": 552.169625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 87.118346416
+        },
+        {
+            "frame_id": 228,
+            "perf_time_ms": 480.559875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 87.6163825
+        },
+        {
+            "frame_id": 229,
+            "perf_time_ms": 526.746708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 88.160458916
+        },
+        {
+            "frame_id": 230,
+            "perf_time_ms": 575.545208,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 88.755605541
+        },
+        {
+            "frame_id": 231,
+            "perf_time_ms": 597.867208,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 89.370231833
+        },
+        {
+            "frame_id": 232,
+            "perf_time_ms": 540.251125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 89.932459875
+        },
+        {
+            "frame_id": 233,
+            "perf_time_ms": 521.390875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 90.472678708
+        },
+        {
+            "frame_id": 234,
+            "perf_time_ms": 581.319666,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 91.073025416
+        },
+        {
+            "frame_id": 235,
+            "perf_time_ms": 584.4485,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 91.676629708
+        },
+        {
+            "frame_id": 236,
+            "perf_time_ms": 542.326708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 92.239564583
+        },
+        {
+            "frame_id": 237,
+            "perf_time_ms": 574.937166,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 92.835199416
+        },
+        {
+            "frame_id": 238,
+            "perf_time_ms": 601.164416,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 93.454513791
+        },
+        {
+            "frame_id": 239,
+            "perf_time_ms": 557.563,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 94.030990041
+        },
+        {
+            "frame_id": 240,
+            "perf_time_ms": 597.578334,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 94.649257125
+        },
+        {
+            "frame_id": 241,
+            "perf_time_ms": 566.009416,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 95.235369041
+        },
+        {
+            "frame_id": 242,
+            "perf_time_ms": 571.102083,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 95.826446583
+        },
+        {
+            "frame_id": 243,
+            "perf_time_ms": 558.879291,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 96.402832041
+        },
+        {
+            "frame_id": 244,
+            "perf_time_ms": 580.969375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 97.001976583
+        },
+        {
+            "frame_id": 245,
+            "perf_time_ms": 574.589625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 97.596134375
+        },
+        {
+            "frame_id": 246,
+            "perf_time_ms": 549.4905,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 98.1631
+        },
+        {
+            "frame_id": 247,
+            "perf_time_ms": 584.665792,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 98.766259458
+        },
+        {
+            "frame_id": 248,
+            "perf_time_ms": 587.127458,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 99.376716333
+        },
+        {
+            "frame_id": 249,
+            "perf_time_ms": 572.008709,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 99.967323125
+        },
+        {
+            "frame_id": 250,
+            "perf_time_ms": 548.186042,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 100.535808625
+        },
+        {
+            "frame_id": 251,
+            "perf_time_ms": 460.781959,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 101.01695125
+        },
+        {
+            "frame_id": 252,
+            "perf_time_ms": 457.908083,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 101.491642833
+        },
+        {
+            "frame_id": 253,
+            "perf_time_ms": 500.941125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 102.009801833
+        },
+        {
+            "frame_id": 254,
+            "perf_time_ms": 540.63775,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 102.567617875
+        },
+        {
+            "frame_id": 255,
+            "perf_time_ms": 599.261041,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 103.184389916
+        },
+        {
+            "frame_id": 256,
+            "perf_time_ms": 514.922208,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 103.723440916
+        },
+        {
+            "frame_id": 257,
+            "perf_time_ms": 554.570541,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 104.298638541
+        },
+        {
+            "frame_id": 258,
+            "perf_time_ms": 577.827875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 104.894192
+        },
+        {
+            "frame_id": 259,
+            "perf_time_ms": 558.3741670000001,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 105.470761458
+        },
+        {
+            "frame_id": 260,
+            "perf_time_ms": 577.640584,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 106.072157375
+        },
+        {
+            "frame_id": 261,
+            "perf_time_ms": 585.405625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 106.679984875
+        },
+        {
+            "frame_id": 262,
+            "perf_time_ms": 606.385625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 107.304833333
+        },
+        {
+            "frame_id": 263,
+            "perf_time_ms": 578.965125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 107.902425208
+        },
+        {
+            "frame_id": 264,
+            "perf_time_ms": 587.789958,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 108.508775833
+        },
+        {
+            "frame_id": 265,
+            "perf_time_ms": 572.081833,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 109.101868041
+        },
+        {
+            "frame_id": 266,
+            "perf_time_ms": 591.949625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 109.711789041
+        },
+        {
+            "frame_id": 267,
+            "perf_time_ms": 568.02075,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 110.299871833
+        },
+        {
+            "frame_id": 268,
+            "perf_time_ms": 550.219708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 110.868430291
+        },
+        {
+            "frame_id": 269,
+            "perf_time_ms": 556.481792,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 111.442287625
+        },
+        {
+            "frame_id": 270,
+            "perf_time_ms": 578.631459,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 112.03925575
+        },
+        {
+            "frame_id": 271,
+            "perf_time_ms": 576.884292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 112.635836583
+        },
+        {
+            "frame_id": 272,
+            "perf_time_ms": 553.095916,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 113.206263916
+        },
+        {
+            "frame_id": 273,
+            "perf_time_ms": 576.465875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 113.802859125
+        },
+        {
+            "frame_id": 274,
+            "perf_time_ms": 580.443125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 114.402456166
+        },
+        {
+            "frame_id": 275,
+            "perf_time_ms": 553.136167,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 114.9730005
+        },
+        {
+            "frame_id": 276,
+            "perf_time_ms": 580.850792,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 115.571582708
+        },
+        {
+            "frame_id": 277,
+            "perf_time_ms": 580.638625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 116.170489583
+        },
+        {
+            "frame_id": 278,
+            "perf_time_ms": 581.320292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 116.769088583
+        },
+        {
+            "frame_id": 279,
+            "perf_time_ms": 584.979834,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 117.372254625
+        },
+        {
+            "frame_id": 280,
+            "perf_time_ms": 578.858833,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 117.969629416
+        },
+        {
+            "frame_id": 281,
+            "perf_time_ms": 579.243334,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 118.568014875
+        },
+        {
+            "frame_id": 282,
+            "perf_time_ms": 558.976042,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 119.148372583
+        },
+        {
+            "frame_id": 283,
+            "perf_time_ms": 634.051,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 119.800002083
+        },
+        {
+            "frame_id": 284,
+            "perf_time_ms": 506.947917,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 120.329401125
+        },
+        {
+            "frame_id": 285,
+            "perf_time_ms": 459.124959,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 120.807242375
+        },
+        {
+            "frame_id": 286,
+            "perf_time_ms": 550.874584,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 121.375357
+        },
+        {
+            "frame_id": 287,
+            "perf_time_ms": 585.184,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 121.977736791
+        },
+        {
+            "frame_id": 288,
+            "perf_time_ms": 590.104375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 122.586041291
+        },
+        {
+            "frame_id": 289,
+            "perf_time_ms": 563.539,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 123.170796083
+        },
+        {
+            "frame_id": 290,
+            "perf_time_ms": 585.215458,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 123.777076333
+        },
+        {
+            "frame_id": 291,
+            "perf_time_ms": 585.881042,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 124.381748958
+        },
+        {
+            "frame_id": 292,
+            "perf_time_ms": 568.893166,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 124.969383541
+        },
+        {
+            "frame_id": 293,
+            "perf_time_ms": 441.324333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 125.428803208
+        },
+        {
+            "frame_id": 294,
+            "perf_time_ms": 509.80775,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 125.956197416
+        },
+        {
+            "frame_id": 295,
+            "perf_time_ms": 545.0305,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 126.519448208
+        },
+        {
+            "frame_id": 296,
+            "perf_time_ms": 577.238209,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 127.115747125
+        },
+        {
+            "frame_id": 297,
+            "perf_time_ms": 583.960542,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 127.718168375
+        },
+        {
+            "frame_id": 298,
+            "perf_time_ms": 579.864375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 128.3152925
+        },
+        {
+            "frame_id": 299,
+            "perf_time_ms": 614.288041,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 128.948133791
+        },
+        {
+            "frame_id": 300,
+            "perf_time_ms": 560.919375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 129.530104666
+        },
+        {
+            "frame_id": 301,
+            "perf_time_ms": 565.943167,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 130.114739
+        },
+        {
+            "frame_id": 302,
+            "perf_time_ms": 589.936375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 130.724811708
+        },
+        {
+            "frame_id": 303,
+            "perf_time_ms": 569.577042,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 131.3117875
+        },
+        {
+            "frame_id": 304,
+            "perf_time_ms": 584.567208,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 131.916153833
+        },
+        {
+            "frame_id": 305,
+            "perf_time_ms": 551.712666,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 132.486534916
+        },
+        {
+            "frame_id": 306,
+            "perf_time_ms": 517.282042,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 133.021329583
+        },
+        {
+            "frame_id": 307,
+            "perf_time_ms": 582.146208,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 133.622063791
+        },
+        {
+            "frame_id": 308,
+            "perf_time_ms": 576.296416,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 134.217481916
+        },
+        {
+            "frame_id": 309,
+            "perf_time_ms": 580.790875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 134.815929916
+        },
+        {
+            "frame_id": 310,
+            "perf_time_ms": 590.885625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 135.427044166
+        },
+        {
+            "frame_id": 311,
+            "perf_time_ms": 560.60225,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 136.006192875
+        },
+        {
+            "frame_id": 312,
+            "perf_time_ms": 592.189292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 136.615594625
+        },
+        {
+            "frame_id": 313,
+            "perf_time_ms": 579.685583,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 137.216448166
+        },
+        {
+            "frame_id": 314,
+            "perf_time_ms": 577.229417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 137.812908333
+        },
+        {
+            "frame_id": 315,
+            "perf_time_ms": 583.881958,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 138.415463166
+        },
+        {
+            "frame_id": 316,
+            "perf_time_ms": 577.612834,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 139.01644675
+        },
+        {
+            "frame_id": 317,
+            "perf_time_ms": 576.704,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 139.614460666
+        },
+        {
+            "frame_id": 318,
+            "perf_time_ms": 571.711958,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 140.204987083
+        },
+        {
+            "frame_id": 319,
+            "perf_time_ms": 613.660125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 140.838032833
+        },
+        {
+            "frame_id": 320,
+            "perf_time_ms": 602.668791,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 141.460853166
+        },
+        {
+            "frame_id": 321,
+            "perf_time_ms": 538.765834,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 142.017614875
+        },
+        {
+            "frame_id": 322,
+            "perf_time_ms": 589.739792,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 142.624566125
+        },
+        {
+            "frame_id": 323,
+            "perf_time_ms": 568.373208,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 143.212594333
+        },
+        {
+            "frame_id": 324,
+            "perf_time_ms": 572.497958,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 143.807761541
+        },
+        {
+            "frame_id": 325,
+            "perf_time_ms": 608.967625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 144.436540583
+        },
+        {
+            "frame_id": 326,
+            "perf_time_ms": 594.77025,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 145.05474
+        },
+        {
+            "frame_id": 327,
+            "perf_time_ms": 576.032834,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 145.652609125
+        },
+        {
+            "frame_id": 328,
+            "perf_time_ms": 593.862208,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 146.264858208
+        },
+        {
+            "frame_id": 329,
+            "perf_time_ms": 562.68,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 146.846417666
+        },
+        {
+            "frame_id": 330,
+            "perf_time_ms": 602.637458,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 147.467351791
+        },
+        {
+            "frame_id": 331,
+            "perf_time_ms": 558.988125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 148.045408625
+        },
+        {
+            "frame_id": 332,
+            "perf_time_ms": 590.546792,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 148.65377725
+        },
+        {
+            "frame_id": 333,
+            "perf_time_ms": 574.736667,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 149.24690775
+        },
+        {
+            "frame_id": 334,
+            "perf_time_ms": 454.313541,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 149.720079791
+        },
+        {
+            "frame_id": 335,
+            "perf_time_ms": 522.286125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 150.259888
+        },
+        {
+            "frame_id": 336,
+            "perf_time_ms": 576.813542,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 150.856942375
+        },
+        {
+            "frame_id": 337,
+            "perf_time_ms": 632.314834,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 151.5065235
+        },
+        {
+            "frame_id": 338,
+            "perf_time_ms": 611.436,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 152.13967275
+        },
+        {
+            "frame_id": 339,
+            "perf_time_ms": 785.799917,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 152.946868083
+        },
+        {
+            "frame_id": 340,
+            "perf_time_ms": 670.356167,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 153.651100125
+        },
+        {
+            "frame_id": 341,
+            "perf_time_ms": 583.10975,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 154.255909583
+        },
+        {
+            "frame_id": 342,
+            "perf_time_ms": 574.330875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 154.850543291
+        },
+        {
+            "frame_id": 343,
+            "perf_time_ms": 598.134625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 155.4664345
+        },
+        {
+            "frame_id": 344,
+            "perf_time_ms": 559.491416,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 156.045882791
+        },
+        {
+            "frame_id": 345,
+            "perf_time_ms": 561.648042,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 156.626928083
+        },
+        {
+            "frame_id": 346,
+            "perf_time_ms": 487.42,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 157.131750875
+        },
+        {
+            "frame_id": 347,
+            "perf_time_ms": 560.149167,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 157.715375458
+        },
+        {
+            "frame_id": 348,
+            "perf_time_ms": 591.217208,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 158.329320916
+        },
+        {
+            "frame_id": 349,
+            "perf_time_ms": 573.059542,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 158.923534208
+        },
+        {
+            "frame_id": 350,
+            "perf_time_ms": 532.747916,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 159.475197791
+        },
+        {
+            "frame_id": 351,
+            "perf_time_ms": 547.205291,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 160.042134666
+        },
+        {
+            "frame_id": 352,
+            "perf_time_ms": 598.902459,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 160.658778375
+        },
+        {
+            "frame_id": 353,
+            "perf_time_ms": 625.909375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 161.302825041
+        },
+        {
+            "frame_id": 354,
+            "perf_time_ms": 560.793833,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 161.883564541
+        },
+        {
+            "frame_id": 355,
+            "perf_time_ms": 581.24425,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 162.487685625
+        },
+        {
+            "frame_id": 356,
+            "perf_time_ms": 573.07225,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 163.081433708
+        },
+        {
+            "frame_id": 357,
+            "perf_time_ms": 638.738,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 163.739349416
+        },
+        {
+            "frame_id": 358,
+            "perf_time_ms": 561.603333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 164.320334833
+        },
+        {
+            "frame_id": 359,
+            "perf_time_ms": 562.70425,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 164.905432166
+        },
+        {
+            "frame_id": 360,
+            "perf_time_ms": 569.280583,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 165.492388916
+        },
+        {
+            "frame_id": 361,
+            "perf_time_ms": 563.485292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 166.074568875
+        },
+        {
+            "frame_id": 362,
+            "perf_time_ms": 591.32025,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 166.684914541
+        },
+        {
+            "frame_id": 363,
+            "perf_time_ms": 583.285792,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 167.2859745
+        },
+        {
+            "frame_id": 364,
+            "perf_time_ms": 578.283875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 167.88344825
+        },
+        {
+            "frame_id": 365,
+            "perf_time_ms": 581.353333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 168.483457083
+        },
+        {
+            "frame_id": 366,
+            "perf_time_ms": 547.037833,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 169.047932958
+        },
+        {
+            "frame_id": 367,
+            "perf_time_ms": 451.697375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 169.518425416
+        },
+        {
+            "frame_id": 368,
+            "perf_time_ms": 530.746666,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 170.066526291
+        },
+        {
+            "frame_id": 369,
+            "perf_time_ms": 554.53375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 170.639332958
+        },
+        {
+            "frame_id": 370,
+            "perf_time_ms": 550.83075,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 171.207885166
+        },
+        {
+            "frame_id": 371,
+            "perf_time_ms": 599.41975,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 171.825256291
+        },
+        {
+            "frame_id": 372,
+            "perf_time_ms": 533.378667,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 172.37958825
+        },
+        {
+            "frame_id": 373,
+            "perf_time_ms": 584.718166,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 172.983076291
+        },
+        {
+            "frame_id": 374,
+            "perf_time_ms": 598.565625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 173.601106666
+        },
+        {
+            "frame_id": 375,
+            "perf_time_ms": 558.854125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 174.179067166
+        },
+        {
+            "frame_id": 376,
+            "perf_time_ms": 588.939334,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 174.787716625
+        },
+        {
+            "frame_id": 377,
+            "perf_time_ms": 574.334,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 175.379984583
+        },
+        {
+            "frame_id": 378,
+            "perf_time_ms": 577.748875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 175.9799875
+        },
+        {
+            "frame_id": 379,
+            "perf_time_ms": 585.711958,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 176.585470541
+        },
+        {
+            "frame_id": 380,
+            "perf_time_ms": 587.327541,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 177.191409291
+        },
+        {
+            "frame_id": 381,
+            "perf_time_ms": 581.433,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 177.791781166
+        },
+        {
+            "frame_id": 382,
+            "perf_time_ms": 570.457875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 178.379570416
+        },
+        {
+            "frame_id": 383,
+            "perf_time_ms": 590.476709,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 178.98849525
+        },
+        {
+            "frame_id": 384,
+            "perf_time_ms": 679.144292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 179.68769825
+        },
+        {
+            "frame_id": 385,
+            "perf_time_ms": 613.396958,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 180.323584041
+        },
+        {
+            "frame_id": 386,
+            "perf_time_ms": 579.636625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 180.921958833
+        },
+        {
+            "frame_id": 387,
+            "perf_time_ms": 583.207,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 181.524192416
+        },
+        {
+            "frame_id": 388,
+            "perf_time_ms": 571.252583,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 182.114670791
+        },
+        {
+            "frame_id": 389,
+            "perf_time_ms": 589.988,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 182.722991625
+        },
+        {
+            "frame_id": 390,
+            "perf_time_ms": 433.89775,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 183.175432333
+        },
+        {
+            "frame_id": 391,
+            "perf_time_ms": 495.749708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 183.693119458
+        },
+        {
+            "frame_id": 392,
+            "perf_time_ms": 524.026917,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 184.234894375
+        },
+        {
+            "frame_id": 393,
+            "perf_time_ms": 559.536667,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 184.812313625
+        },
+        {
+            "frame_id": 394,
+            "perf_time_ms": 547.790833,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 185.377750041
+        },
+        {
+            "frame_id": 395,
+            "perf_time_ms": 582.270375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 185.978291916
+        },
+        {
+            "frame_id": 396,
+            "perf_time_ms": 492.719958,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 186.490252166
+        },
+        {
+            "frame_id": 397,
+            "perf_time_ms": 570.374209,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 187.0809285
+        },
+        {
+            "frame_id": 398,
+            "perf_time_ms": 585.640792,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 187.6839585
+        },
+        {
+            "frame_id": 399,
+            "perf_time_ms": 599.170375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 188.302311166
+        },
+        {
+            "frame_id": 400,
+            "perf_time_ms": 552.855875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 188.8750875
+        },
+        {
+            "frame_id": 401,
+            "perf_time_ms": 574.735,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 189.469688291
+        },
+        {
+            "frame_id": 402,
+            "perf_time_ms": 573.054959,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 190.062982125
+        },
+        {
+            "frame_id": 403,
+            "perf_time_ms": 568.762083,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 190.650913041
+        },
+        {
+            "frame_id": 404,
+            "perf_time_ms": 575.404708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 191.246350458
+        },
+        {
+            "frame_id": 405,
+            "perf_time_ms": 566.005958,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 191.834873208
+        },
+        {
+            "frame_id": 406,
+            "perf_time_ms": 554.39,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 192.408029916
+        },
+        {
+            "frame_id": 407,
+            "perf_time_ms": 555.054334,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 192.98065925
+        },
+        {
+            "frame_id": 408,
+            "perf_time_ms": 584.156167,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 193.584001833
+        },
+        {
+            "frame_id": 409,
+            "perf_time_ms": 576.635209,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 194.177982
+        },
+        {
+            "frame_id": 410,
+            "perf_time_ms": 580.118709,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 194.7768485
+        },
+        {
+            "frame_id": 411,
+            "perf_time_ms": 548.286291,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 195.344059041
+        },
+        {
+            "frame_id": 412,
+            "perf_time_ms": 554.781792,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 195.916142625
+        },
+        {
+            "frame_id": 413,
+            "perf_time_ms": 577.128708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 196.510873333
+        },
+        {
+            "frame_id": 414,
+            "perf_time_ms": 427.420708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 196.957004708
+        },
+        {
+            "frame_id": 415,
+            "perf_time_ms": 486.853583,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 197.462734291
+        },
+        {
+            "frame_id": 416,
+            "perf_time_ms": 436.1555,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 197.916431583
+        },
+        {
+            "frame_id": 417,
+            "perf_time_ms": 529.392041,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 198.463490791
+        },
+        {
+            "frame_id": 418,
+            "perf_time_ms": 531.335458,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 199.012806041
+        },
+        {
+            "frame_id": 419,
+            "perf_time_ms": 617.548583,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 199.649259708
+        },
+        {
+            "frame_id": 420,
+            "perf_time_ms": 587.57725,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 200.256199083
+        },
+        {
+            "frame_id": 421,
+            "perf_time_ms": 594.78325,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 200.870660416
+        },
+        {
+            "frame_id": 422,
+            "perf_time_ms": 570.447625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 201.460118291
+        },
+        {
+            "frame_id": 423,
+            "perf_time_ms": 586.708792,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 202.065671708
+        },
+        {
+            "frame_id": 424,
+            "perf_time_ms": 595.25175,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 202.68035725
+        },
+        {
+            "frame_id": 425,
+            "perf_time_ms": 605.880458,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 203.304894791
+        },
+        {
+            "frame_id": 426,
+            "perf_time_ms": 520.4265,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 203.844338083
+        },
+        {
+            "frame_id": 427,
+            "perf_time_ms": 536.002666,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 204.398965541
+        },
+        {
+            "frame_id": 428,
+            "perf_time_ms": 574.67325,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 204.992416666
+        },
+        {
+            "frame_id": 429,
+            "perf_time_ms": 583.469584,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 205.594124125
+        },
+        {
+            "frame_id": 430,
+            "perf_time_ms": 554.726167,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 206.167823708
+        },
+        {
+            "frame_id": 431,
+            "perf_time_ms": 579.686208,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 206.765004041
+        },
+        {
+            "frame_id": 432,
+            "perf_time_ms": 587.709458,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 207.372037041
+        },
+        {
+            "frame_id": 433,
+            "perf_time_ms": 573.567958,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 207.964490166
+        },
+        {
+            "frame_id": 434,
+            "perf_time_ms": 548.056834,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 208.530434625
+        },
+        {
+            "frame_id": 435,
+            "perf_time_ms": 493.023625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 209.042605916
+        },
+        {
+            "frame_id": 436,
+            "perf_time_ms": 564.245292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 209.625571708
+        },
+        {
+            "frame_id": 437,
+            "perf_time_ms": 588.888292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 210.23254125
+        },
+        {
+            "frame_id": 438,
+            "perf_time_ms": 494.289083,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 210.748690958
+        },
+        {
+            "frame_id": 439,
+            "perf_time_ms": 471.735417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 211.238316083
+        },
+        {
+            "frame_id": 440,
+            "perf_time_ms": 559.869209,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 211.815637875
+        },
+        {
+            "frame_id": 441,
+            "perf_time_ms": 583.002,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 212.418127833
+        },
+        {
+            "frame_id": 442,
+            "perf_time_ms": 582.643959,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 213.0194645
+        },
+        {
+            "frame_id": 443,
+            "perf_time_ms": 597.113375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 213.635087541
+        },
+        {
+            "frame_id": 444,
+            "perf_time_ms": 572.571333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 214.225972416
+        },
+        {
+            "frame_id": 445,
+            "perf_time_ms": 528.282084,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 214.772143875
+        },
+        {
+            "frame_id": 446,
+            "perf_time_ms": 578.336,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 215.369225625
+        },
+        {
+            "frame_id": 447,
+            "perf_time_ms": 581.906375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 215.970066
+        },
+        {
+            "frame_id": 448,
+            "perf_time_ms": 588.005916,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 216.575637416
+        },
+        {
+            "frame_id": 449,
+            "perf_time_ms": 571.205292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 217.165373625
+        },
+        {
+            "frame_id": 450,
+            "perf_time_ms": 586.724417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 217.7709295
+        },
+        {
+            "frame_id": 451,
+            "perf_time_ms": 573.723917,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 218.363098375
+        },
+        {
+            "frame_id": 452,
+            "perf_time_ms": 585.114791,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 218.967791666
+        },
+        {
+            "frame_id": 453,
+            "perf_time_ms": 583.223334,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 219.56929975
+        },
+        {
+            "frame_id": 454,
+            "perf_time_ms": 572.37575,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 220.1601395
+        },
+        {
+            "frame_id": 455,
+            "perf_time_ms": 587.883292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 220.766699708
+        },
+        {
+            "frame_id": 456,
+            "perf_time_ms": 587.501916,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 221.371547166
+        },
+        {
+            "frame_id": 457,
+            "perf_time_ms": 580.12025,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 221.970499625
+        },
+        {
+            "frame_id": 458,
+            "perf_time_ms": 584.454542,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 222.574676083
+        },
+        {
+            "frame_id": 459,
+            "perf_time_ms": 582.32525,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 223.176549333
+        },
+        {
+            "frame_id": 460,
+            "perf_time_ms": 576.3975,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 223.771936208
+        },
+        {
+            "frame_id": 461,
+            "perf_time_ms": 543.41875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 224.3338255
+        },
+        {
+            "frame_id": 462,
+            "perf_time_ms": 578.866875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 224.931488833
+        },
+        {
+            "frame_id": 463,
+            "perf_time_ms": 590.20425,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 225.540690041
+        },
+        {
+            "frame_id": 464,
+            "perf_time_ms": 570.6155,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 226.129221041
+        },
+        {
+            "frame_id": 465,
+            "perf_time_ms": 581.354334,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 226.72975925
+        },
+        {
+            "frame_id": 466,
+            "perf_time_ms": 588.234709,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 227.337862625
+        },
+        {
+            "frame_id": 467,
+            "perf_time_ms": 531.264166,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 227.889637791
+        },
+        {
+            "frame_id": 468,
+            "perf_time_ms": 584.833125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 228.494597
+        },
+        {
+            "frame_id": 469,
+            "perf_time_ms": 434.853875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 228.947396125
+        },
+        {
+            "frame_id": 470,
+            "perf_time_ms": 521.13775,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 229.486331666
+        },
+        {
+            "frame_id": 471,
+            "perf_time_ms": 573.6675,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 230.0791875
+        },
+        {
+            "frame_id": 472,
+            "perf_time_ms": 568.249959,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 230.664785625
+        },
+        {
+            "frame_id": 473,
+            "perf_time_ms": 581.998417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 231.265038833
+        },
+        {
+            "frame_id": 474,
+            "perf_time_ms": 549.330542,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 231.83357425
+        },
+        {
+            "frame_id": 475,
+            "perf_time_ms": 590.838375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 232.44195625
+        },
+        {
+            "frame_id": 476,
+            "perf_time_ms": 566.261084,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 233.02729425
+        },
+        {
+            "frame_id": 477,
+            "perf_time_ms": 575.373208,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 233.621300958
+        },
+        {
+            "frame_id": 478,
+            "perf_time_ms": 469.338875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 234.110771875
+        },
+        {
+            "frame_id": 479,
+            "perf_time_ms": 542.410375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 234.676977666
+        },
+        {
+            "frame_id": 480,
+            "perf_time_ms": 568.361375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 235.262569833
+        },
+        {
+            "frame_id": 481,
+            "perf_time_ms": 585.648666,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 235.865676916
+        },
+        {
+            "frame_id": 482,
+            "perf_time_ms": 577.581708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 236.460957791
+        },
+        {
+            "frame_id": 483,
+            "perf_time_ms": 587.30025,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 237.067072125
+        },
+        {
+            "frame_id": 484,
+            "perf_time_ms": 585.165583,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 237.669536541
+        },
+        {
+            "frame_id": 485,
+            "perf_time_ms": 589.289125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 238.277724458
+        },
+        {
+            "frame_id": 486,
+            "perf_time_ms": 568.108209,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 238.864333875
+        },
+        {
+            "frame_id": 487,
+            "perf_time_ms": 656.907792,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 239.53861975
+        },
+        {
+            "frame_id": 488,
+            "perf_time_ms": 647.012334,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 240.21048475
+        },
+        {
+            "frame_id": 489,
+            "perf_time_ms": 567.520125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 240.798363875
+        },
+        {
+            "frame_id": 490,
+            "perf_time_ms": 579.605625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 241.396863083
+        },
+        {
+            "frame_id": 491,
+            "perf_time_ms": 607.35475,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 242.023874375
+        },
+        {
+            "frame_id": 492,
+            "perf_time_ms": 590.122375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 242.634579375
+        },
+        {
+            "frame_id": 493,
+            "perf_time_ms": 576.254167,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 243.228578208
+        },
+        {
+            "frame_id": 494,
+            "perf_time_ms": 575.561833,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 243.828273166
+        },
+        {
+            "frame_id": 495,
+            "perf_time_ms": 537.037667,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 244.384611333
+        },
+        {
+            "frame_id": 496,
+            "perf_time_ms": 569.075,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 244.971190875
+        },
+        {
+            "frame_id": 497,
+            "perf_time_ms": 573.970666,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 245.565033291
+        },
+        {
+            "frame_id": 498,
+            "perf_time_ms": 585.86375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 246.169801916
+        },
+        {
+            "frame_id": 499,
+            "perf_time_ms": 647.971708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 246.869147958
+        },
+        {
+            "frame_id": 500,
+            "perf_time_ms": 589.276333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 247.477570083
+        },
+        {
+            "frame_id": 501,
+            "perf_time_ms": 605.694709,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 248.101791875
+        },
+        {
+            "frame_id": 502,
+            "perf_time_ms": 651.5165,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 248.784271458
+        },
+        {
+            "frame_id": 503,
+            "perf_time_ms": 610.343208,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 249.415675791
+        },
+        {
+            "frame_id": 504,
+            "perf_time_ms": 579.285625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 250.012575125
+        },
+        {
+            "frame_id": 505,
+            "perf_time_ms": 575.3155,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 250.607723208
+        },
+        {
+            "frame_id": 506,
+            "perf_time_ms": 606.732834,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 251.24013875
+        },
+        {
+            "frame_id": 507,
+            "perf_time_ms": 631.392459,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 251.890447375
+        },
+        {
+            "frame_id": 508,
+            "perf_time_ms": 620.073125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 252.530734208
+        },
+        {
+            "frame_id": 509,
+            "perf_time_ms": 595.152417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 253.145411125
+        },
+        {
+            "frame_id": 510,
+            "perf_time_ms": 648.280709,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 253.812750625
+        },
+        {
+            "frame_id": 511,
+            "perf_time_ms": 599.726375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 254.431724041
+        },
+        {
+            "frame_id": 512,
+            "perf_time_ms": 574.830875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 255.030263208
+        },
+        {
+            "frame_id": 513,
+            "perf_time_ms": 570.764708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 255.627177666
+        },
+        {
+            "frame_id": 514,
+            "perf_time_ms": 605.64075,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 256.251172041
+        },
+        {
+            "frame_id": 515,
+            "perf_time_ms": 591.186,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 256.863766291
+        },
+        {
+            "frame_id": 516,
+            "perf_time_ms": 592.518333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 257.476126458
+        },
+        {
+            "frame_id": 517,
+            "perf_time_ms": 588.184042,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 258.083293125
+        },
+        {
+            "frame_id": 518,
+            "perf_time_ms": 568.097458,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 258.671540833
+        },
+        {
+            "frame_id": 519,
+            "perf_time_ms": 582.479792,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 259.271571625
+        },
+        {
+            "frame_id": 520,
+            "perf_time_ms": 583.241042,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 259.875806833
+        },
+        {
+            "frame_id": 521,
+            "perf_time_ms": 583.18075,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 260.47762
+        },
+        {
+            "frame_id": 522,
+            "perf_time_ms": 589.275459,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 261.084511875
+        },
+        {
+            "frame_id": 523,
+            "perf_time_ms": 568.3855,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 261.6731945
+        },
+        {
+            "frame_id": 524,
+            "perf_time_ms": 579.701667,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 262.27224525
+        },
+        {
+            "frame_id": 525,
+            "perf_time_ms": 603.168084,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 262.894275625
+        },
+        {
+            "frame_id": 526,
+            "perf_time_ms": 616.807833,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 263.530075208
+        },
+        {
+            "frame_id": 527,
+            "perf_time_ms": 587.17675,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 264.137163416
+        },
+        {
+            "frame_id": 528,
+            "perf_time_ms": 585.767875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 264.742209458
+        },
+        {
+            "frame_id": 529,
+            "perf_time_ms": 542.773625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 265.302555083
+        },
+        {
+            "frame_id": 530,
+            "perf_time_ms": 587.505458,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 265.908810666
+        },
+        {
+            "frame_id": 531,
+            "perf_time_ms": 586.534958,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 266.514349208
+        },
+        {
+            "frame_id": 532,
+            "perf_time_ms": 577.88975,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 267.109732625
+        },
+        {
+            "frame_id": 533,
+            "perf_time_ms": 574.575417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 267.702931958
+        },
+        {
+            "frame_id": 534,
+            "perf_time_ms": 588.460666,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 268.310552416
+        },
+        {
+            "frame_id": 535,
+            "perf_time_ms": 580.699541,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 268.910280416
+        },
+        {
+            "frame_id": 536,
+            "perf_time_ms": 575.8,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 269.507040958
+        },
+        {
+            "frame_id": 537,
+            "perf_time_ms": 577.565166,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 270.102004166
+        },
+        {
+            "frame_id": 538,
+            "perf_time_ms": 592.814625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 270.713615083
+        },
+        {
+            "frame_id": 539,
+            "perf_time_ms": 577.32875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 271.311473375
+        },
+        {
+            "frame_id": 540,
+            "perf_time_ms": 574.4955,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 271.904478333
+        },
+        {
+            "frame_id": 541,
+            "perf_time_ms": 588.418042,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 272.511592333
+        },
+        {
+            "frame_id": 542,
+            "perf_time_ms": 570.388125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 273.099904791
+        },
+        {
+            "frame_id": 543,
+            "perf_time_ms": 592.190291,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 273.711938916
+        },
+        {
+            "frame_id": 544,
+            "perf_time_ms": 583.722666,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 274.315014916
+        },
+        {
+            "frame_id": 545,
+            "perf_time_ms": 569.667834,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 274.904255125
+        },
+        {
+            "frame_id": 546,
+            "perf_time_ms": 586.543916,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 275.509615666
+        },
+        {
+            "frame_id": 547,
+            "perf_time_ms": 598.478166,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 276.125616666
+        },
+        {
+            "frame_id": 548,
+            "perf_time_ms": 611.874916,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 276.756701166
+        },
+        {
+            "frame_id": 549,
+            "perf_time_ms": 605.046292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 277.38084625
+        },
+        {
+            "frame_id": 550,
+            "perf_time_ms": 574.54925,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 277.97547025
+        },
+        {
+            "frame_id": 551,
+            "perf_time_ms": 454.49225,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 278.449315625
+        },
+        {
+            "frame_id": 552,
+            "perf_time_ms": 497.295292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 278.965090833
+        },
+        {
+            "frame_id": 553,
+            "perf_time_ms": 533.220709,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 279.515993875
+        },
+        {
+            "frame_id": 554,
+            "perf_time_ms": 567.821042,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 280.101450625
+        },
+        {
+            "frame_id": 555,
+            "perf_time_ms": 598.452417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 280.720223208
+        },
+        {
+            "frame_id": 556,
+            "perf_time_ms": 572.331875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 281.312096791
+        },
+        {
+            "frame_id": 557,
+            "perf_time_ms": 572.3225,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 281.902415916
+        },
+        {
+            "frame_id": 558,
+            "perf_time_ms": 593.254167,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 282.514528625
+        },
+        {
+            "frame_id": 559,
+            "perf_time_ms": 583.883125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 283.117354291
+        },
+        {
+            "frame_id": 560,
+            "perf_time_ms": 449.81575,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 283.586512125
+        },
+        {
+            "frame_id": 561,
+            "perf_time_ms": 427.043375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 284.030868083
+        },
+        {
+            "frame_id": 562,
+            "perf_time_ms": 533.239333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 284.581852708
+        },
+        {
+            "frame_id": 563,
+            "perf_time_ms": 495.373625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 285.095248666
+        },
+        {
+            "frame_id": 564,
+            "perf_time_ms": 595.417292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 285.707537833
+        },
+        {
+            "frame_id": 565,
+            "perf_time_ms": 575.364417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 286.301949208
+        },
+        {
+            "frame_id": 566,
+            "perf_time_ms": 577.006917,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 286.897945458
+        },
+        {
+            "frame_id": 567,
+            "perf_time_ms": 554.960708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 287.471804208
+        },
+        {
+            "frame_id": 568,
+            "perf_time_ms": 582.185667,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 288.07371225
+        },
+        {
+            "frame_id": 569,
+            "perf_time_ms": 571.558459,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 288.667634
+        },
+        {
+            "frame_id": 570,
+            "perf_time_ms": 574.880209,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 289.2617855
+        },
+        {
+            "frame_id": 571,
+            "perf_time_ms": 561.342208,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 289.841779791
+        },
+        {
+            "frame_id": 572,
+            "perf_time_ms": 571.772291,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 290.436860666
+        },
+        {
+            "frame_id": 573,
+            "perf_time_ms": 566.733791,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 291.022531416
+        },
+        {
+            "frame_id": 574,
+            "perf_time_ms": 555.33425,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 291.597133958
+        },
+        {
+            "frame_id": 575,
+            "perf_time_ms": 586.135959,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 292.201223
+        },
+        {
+            "frame_id": 576,
+            "perf_time_ms": 586.246708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 292.806373916
+        },
+        {
+            "frame_id": 577,
+            "perf_time_ms": 581.046375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 293.405868583
+        },
+        {
+            "frame_id": 578,
+            "perf_time_ms": 585.764667,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 294.009740083
+        },
+        {
+            "frame_id": 579,
+            "perf_time_ms": 563.1355,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 294.591969875
+        },
+        {
+            "frame_id": 580,
+            "perf_time_ms": 586.824333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 295.197379666
+        },
+        {
+            "frame_id": 581,
+            "perf_time_ms": 599.825375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 295.816470041
+        },
+        {
+            "frame_id": 582,
+            "perf_time_ms": 535.01475,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 296.37082575
+        },
+        {
+            "frame_id": 583,
+            "perf_time_ms": 576.830292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 296.9650285
+        },
+        {
+            "frame_id": 584,
+            "perf_time_ms": 589.439208,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 297.574149416
+        },
+        {
+            "frame_id": 585,
+            "perf_time_ms": 576.169792,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 298.169101458
+        },
+        {
+            "frame_id": 586,
+            "perf_time_ms": 589.901542,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 298.77708375
+        },
+        {
+            "frame_id": 587,
+            "perf_time_ms": 630.379333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 299.426362416
+        },
+        {
+            "frame_id": 588,
+            "perf_time_ms": 700.40575,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 300.16062925
+        },
+        {
+            "frame_id": 589,
+            "perf_time_ms": 627.853125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 300.815405458
+        },
+        {
+            "frame_id": 590,
+            "perf_time_ms": 567.142917,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 301.40168525
+        },
+        {
+            "frame_id": 591,
+            "perf_time_ms": 584.365583,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 302.005277791
+        },
+        {
+            "frame_id": 592,
+            "perf_time_ms": 582.235958,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 302.605710583
+        },
+        {
+            "frame_id": 593,
+            "perf_time_ms": 567.4255,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 303.1929915
+        },
+        {
+            "frame_id": 594,
+            "perf_time_ms": 551.206,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 303.761777458
+        },
+        {
+            "frame_id": 595,
+            "perf_time_ms": 576.457542,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 304.360042958
+        },
+        {
+            "frame_id": 596,
+            "perf_time_ms": 586.046459,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 304.965661125
+        },
+        {
+            "frame_id": 597,
+            "perf_time_ms": 587.763916,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 305.571997541
+        },
+        {
+            "frame_id": 598,
+            "perf_time_ms": 577.018917,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 306.169357833
+        },
+        {
+            "frame_id": 599,
+            "perf_time_ms": 571.790083,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 306.758527333
+        },
+        {
+            "frame_id": 600,
+            "perf_time_ms": 604.492959,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 307.381777625
+        },
+        {
+            "frame_id": 601,
+            "perf_time_ms": 548.753125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 307.948987333
+        },
+        {
+            "frame_id": 602,
+            "perf_time_ms": 595.41225,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 308.562296916
+        },
+        {
+            "frame_id": 603,
+            "perf_time_ms": 595.819958,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 309.176860708
+        },
+        {
+            "frame_id": 604,
+            "perf_time_ms": 585.668333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 309.781349458
+        },
+        {
+            "frame_id": 605,
+            "perf_time_ms": 580.745333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 310.381995083
+        },
+        {
+            "frame_id": 606,
+            "perf_time_ms": 527.565875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 310.928405833
+        },
+        {
+            "frame_id": 607,
+            "perf_time_ms": 569.391041,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 311.515316166
+        },
+        {
+            "frame_id": 608,
+            "perf_time_ms": 564.00675,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 312.098916291
+        },
+        {
+            "frame_id": 609,
+            "perf_time_ms": 560.856084,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 312.679796625
+        },
+        {
+            "frame_id": 610,
+            "perf_time_ms": 591.271709,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 313.288857125
+        },
+        {
+            "frame_id": 611,
+            "perf_time_ms": 543.101792,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 313.85183075
+        },
+        {
+            "frame_id": 612,
+            "perf_time_ms": 582.217958,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 314.453564916
+        },
+        {
+            "frame_id": 613,
+            "perf_time_ms": 593.001625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 315.064790166
+        },
+        {
+            "frame_id": 614,
+            "perf_time_ms": 594.274959,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 315.682167
+        },
+        {
+            "frame_id": 615,
+            "perf_time_ms": 586.589,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 316.287871833
+        },
+        {
+            "frame_id": 616,
+            "perf_time_ms": 573.125333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 316.880234416
+        },
+        {
+            "frame_id": 617,
+            "perf_time_ms": 601.672458,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 317.500187916
+        },
+        {
+            "frame_id": 618,
+            "perf_time_ms": 605.829834,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 318.12346925
+        },
+        {
+            "frame_id": 619,
+            "perf_time_ms": 575.092083,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 318.717490541
+        },
+        {
+            "frame_id": 620,
+            "perf_time_ms": 584.180959,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 319.32143625
+        },
+        {
+            "frame_id": 621,
+            "perf_time_ms": 565.985583,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 319.906337708
+        },
+        {
+            "frame_id": 622,
+            "perf_time_ms": 604.207917,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 320.529916083
+        },
+        {
+            "frame_id": 623,
+            "perf_time_ms": 579.05475,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 321.126145583
+        },
+        {
+            "frame_id": 624,
+            "perf_time_ms": 575.502417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 321.720862833
+        },
+        {
+            "frame_id": 625,
+            "perf_time_ms": 577.011209,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 322.317128125
+        },
+        {
+            "frame_id": 626,
+            "perf_time_ms": 576.668875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 322.913601541
+        },
+        {
+            "frame_id": 627,
+            "perf_time_ms": 587.983834,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 323.5202135
+        },
+        {
+            "frame_id": 628,
+            "perf_time_ms": 573.320542,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 324.112125833
+        },
+        {
+            "frame_id": 629,
+            "perf_time_ms": 591.244125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 324.722580166
+        },
+        {
+            "frame_id": 630,
+            "perf_time_ms": 576.25675,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 325.317859
+        },
+        {
+            "frame_id": 631,
+            "perf_time_ms": 582.243,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 325.918561541
+        },
+        {
+            "frame_id": 632,
+            "perf_time_ms": 579.617833,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 326.516642291
+        },
+        {
+            "frame_id": 633,
+            "perf_time_ms": 523.6785,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 327.057751125
+        },
+        {
+            "frame_id": 634,
+            "perf_time_ms": 560.2795,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 327.635843041
+        },
+        {
+            "frame_id": 635,
+            "perf_time_ms": 565.212875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 328.219506958
+        },
+        {
+            "frame_id": 636,
+            "perf_time_ms": 592.30275,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 328.83036125
+        },
+        {
+            "frame_id": 637,
+            "perf_time_ms": 606.824167,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 329.45775475
+        },
+        {
+            "frame_id": 638,
+            "perf_time_ms": 569.406125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 330.047647875
+        },
+        {
+            "frame_id": 639,
+            "perf_time_ms": 591.984417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 330.65925775
+        },
+        {
+            "frame_id": 640,
+            "perf_time_ms": 573.595,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 331.252576541
+        },
+        {
+            "frame_id": 641,
+            "perf_time_ms": 570.218334,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 331.841954625
+        },
+        {
+            "frame_id": 642,
+            "perf_time_ms": 599.435166,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 332.459740791
+        },
+        {
+            "frame_id": 643,
+            "perf_time_ms": 566.411333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 333.047171666
+        },
+        {
+            "frame_id": 644,
+            "perf_time_ms": 589.0035,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 333.653764083
+        },
+        {
+            "frame_id": 645,
+            "perf_time_ms": 541.586042,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 334.21395725
+        },
+        {
+            "frame_id": 646,
+            "perf_time_ms": 572.634292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 334.811398958
+        },
+        {
+            "frame_id": 647,
+            "perf_time_ms": 555.271792,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 335.384423875
+        },
+        {
+            "frame_id": 648,
+            "perf_time_ms": 529.389708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 335.932534541
+        },
+        {
+            "frame_id": 649,
+            "perf_time_ms": 612.326375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 336.563369583
+        },
+        {
+            "frame_id": 650,
+            "perf_time_ms": 562.959583,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 337.143736291
+        },
+        {
+            "frame_id": 651,
+            "perf_time_ms": 594.406625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 337.756945666
+        },
+        {
+            "frame_id": 652,
+            "perf_time_ms": 576.603292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 338.3523955
+        },
+        {
+            "frame_id": 653,
+            "perf_time_ms": 581.933292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 338.951918
+        },
+        {
+            "frame_id": 654,
+            "perf_time_ms": 581.482333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 339.552317416
+        },
+        {
+            "frame_id": 655,
+            "perf_time_ms": 582.786333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 340.155358833
+        },
+        {
+            "frame_id": 656,
+            "perf_time_ms": 579.054125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 340.754921791
+        },
+        {
+            "frame_id": 657,
+            "perf_time_ms": 581.347791,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 341.355157041
+        },
+        {
+            "frame_id": 658,
+            "perf_time_ms": 577.100875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 341.949360833
+        },
+        {
+            "frame_id": 659,
+            "perf_time_ms": 541.858042,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 342.510054
+        },
+        {
+            "frame_id": 660,
+            "perf_time_ms": 599.186375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 343.127903125
+        },
+        {
+            "frame_id": 661,
+            "perf_time_ms": 542.607125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 343.687883416
+        },
+        {
+            "frame_id": 662,
+            "perf_time_ms": 592.608417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 344.299046458
+        },
+        {
+            "frame_id": 663,
+            "perf_time_ms": 602.652125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 344.920670583
+        },
+        {
+            "frame_id": 664,
+            "perf_time_ms": 583.909083,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 345.524309708
+        },
+        {
+            "frame_id": 665,
+            "perf_time_ms": 579.116708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 346.122609958
+        },
+        {
+            "frame_id": 666,
+            "perf_time_ms": 591.204875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 346.732183375
+        },
+        {
+            "frame_id": 667,
+            "perf_time_ms": 611.170875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 347.362220041
+        },
+        {
+            "frame_id": 668,
+            "perf_time_ms": 516.44425,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 347.898334208
+        },
+        {
+            "frame_id": 669,
+            "perf_time_ms": 580.129667,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 348.495996125
+        },
+        {
+            "frame_id": 670,
+            "perf_time_ms": 572.958416,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 349.088719291
+        },
+        {
+            "frame_id": 671,
+            "perf_time_ms": 584.706833,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 349.692726333
+        },
+        {
+            "frame_id": 672,
+            "perf_time_ms": 581.282041,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 350.292753916
+        },
+        {
+            "frame_id": 673,
+            "perf_time_ms": 573.206375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 350.884925916
+        },
+        {
+            "frame_id": 674,
+            "perf_time_ms": 590.357583,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 351.492710541
+        },
+        {
+            "frame_id": 675,
+            "perf_time_ms": 576.607916,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 352.088256166
+        },
+        {
+            "frame_id": 676,
+            "perf_time_ms": 581.551708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 352.688705791
+        },
+        {
+            "frame_id": 677,
+            "perf_time_ms": 575.607167,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 353.2819315
+        },
+        {
+            "frame_id": 678,
+            "perf_time_ms": 577.709291,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 353.883822541
+        },
+        {
+            "frame_id": 679,
+            "perf_time_ms": 593.950417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 354.496612125
+        },
+        {
+            "frame_id": 680,
+            "perf_time_ms": 568.767959,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 355.084121875
+        },
+        {
+            "frame_id": 681,
+            "perf_time_ms": 577.693,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 355.680814833
+        },
+        {
+            "frame_id": 682,
+            "perf_time_ms": 583.450375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 356.283804041
+        },
+        {
+            "frame_id": 683,
+            "perf_time_ms": 578.79425,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 356.881923875
+        },
+        {
+            "frame_id": 684,
+            "perf_time_ms": 585.236375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 357.486507666
+        },
+        {
+            "frame_id": 685,
+            "perf_time_ms": 584.587958,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 358.090069666
+        },
+        {
+            "frame_id": 686,
+            "perf_time_ms": 578.958625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 358.688147166
+        },
+        {
+            "frame_id": 687,
+            "perf_time_ms": 609.070916,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 359.317005166
+        },
+        {
+            "frame_id": 688,
+            "perf_time_ms": 638.264875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 359.974413375
+        },
+        {
+            "frame_id": 689,
+            "perf_time_ms": 609.063,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 360.60186783299997
+        },
+        {
+            "frame_id": 690,
+            "perf_time_ms": 600.80125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 361.221227041
+        },
+        {
+            "frame_id": 691,
+            "perf_time_ms": 579.12475,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 361.820075583
+        },
+        {
+            "frame_id": 692,
+            "perf_time_ms": 582.272833,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 362.422167833
+        },
+        {
+            "frame_id": 693,
+            "perf_time_ms": 575.7435,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 363.018340291
+        },
+        {
+            "frame_id": 694,
+            "perf_time_ms": 581.40375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 363.618758166
+        },
+        {
+            "frame_id": 695,
+            "perf_time_ms": 589.582625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 364.226582
+        },
+        {
+            "frame_id": 696,
+            "perf_time_ms": 571.078667,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 364.816020958
+        },
+        {
+            "frame_id": 697,
+            "perf_time_ms": 600.10825,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 365.435082541
+        },
+        {
+            "frame_id": 698,
+            "perf_time_ms": 608.632542,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 366.062898458
+        },
+        {
+            "frame_id": 699,
+            "perf_time_ms": 615.438917,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 366.697344958
+        },
+        {
+            "frame_id": 700,
+            "perf_time_ms": 576.459333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 367.294170958
+        },
+        {
+            "frame_id": 701,
+            "perf_time_ms": 570.9685,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 367.884009875
+        },
+        {
+            "frame_id": 702,
+            "perf_time_ms": 583.886209,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 368.489150125
+        },
+        {
+            "frame_id": 703,
+            "perf_time_ms": 574.284125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 369.082292375
+        },
+        {
+            "frame_id": 704,
+            "perf_time_ms": 589.849625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 369.691207791
+        },
+        {
+            "frame_id": 705,
+            "perf_time_ms": 579.934292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 370.29001425
+        },
+        {
+            "frame_id": 706,
+            "perf_time_ms": 581.802083,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 370.890718791
+        },
+        {
+            "frame_id": 707,
+            "perf_time_ms": 597.535125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 371.507240458
+        },
+        {
+            "frame_id": 708,
+            "perf_time_ms": 593.852417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 372.118898
+        },
+        {
+            "frame_id": 709,
+            "perf_time_ms": 588.536333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 372.726781708
+        },
+        {
+            "frame_id": 710,
+            "perf_time_ms": 583.24725,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 373.32859375
+        },
+        {
+            "frame_id": 711,
+            "perf_time_ms": 579.01225,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 373.925462458
+        },
+        {
+            "frame_id": 712,
+            "perf_time_ms": 585.088709,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 374.529557
+        },
+        {
+            "frame_id": 713,
+            "perf_time_ms": 589.535083,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 375.137530291
+        },
+        {
+            "frame_id": 714,
+            "perf_time_ms": 602.549292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 375.759098
+        },
+        {
+            "frame_id": 715,
+            "perf_time_ms": 574.717708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 376.352336416
+        },
+        {
+            "frame_id": 716,
+            "perf_time_ms": 576.339209,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 376.948859375
+        },
+        {
+            "frame_id": 717,
+            "perf_time_ms": 588.415375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 377.558353291
+        },
+        {
+            "frame_id": 718,
+            "perf_time_ms": 576.548125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 378.152729625
+        },
+        {
+            "frame_id": 719,
+            "perf_time_ms": 589.16375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 378.760728291
+        },
+        {
+            "frame_id": 720,
+            "perf_time_ms": 575.492708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 379.355147958
+        },
+        {
+            "frame_id": 721,
+            "perf_time_ms": 575.595541,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 379.953140166
+        },
+        {
+            "frame_id": 722,
+            "perf_time_ms": 590.2655,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 380.562912583
+        },
+        {
+            "frame_id": 723,
+            "perf_time_ms": 567.77775,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 381.148140458
+        },
+        {
+            "frame_id": 724,
+            "perf_time_ms": 598.855084,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 381.76599925
+        },
+        {
+            "frame_id": 725,
+            "perf_time_ms": 592.20625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 382.377089666
+        },
+        {
+            "frame_id": 726,
+            "perf_time_ms": 595.316208,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 382.991389333
+        },
+        {
+            "frame_id": 727,
+            "perf_time_ms": 600.545708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 383.612267416
+        },
+        {
+            "frame_id": 728,
+            "perf_time_ms": 592.229084,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 384.223754875
+        },
+        {
+            "frame_id": 729,
+            "perf_time_ms": 591.142417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 384.834826375
+        },
+        {
+            "frame_id": 730,
+            "perf_time_ms": 668.99925,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 385.530107458
+        },
+        {
+            "frame_id": 731,
+            "perf_time_ms": 601.691375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 386.154534458
+        },
+        {
+            "frame_id": 732,
+            "perf_time_ms": 627.519666,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 386.801342541
+        },
+        {
+            "frame_id": 733,
+            "perf_time_ms": 612.497959,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 387.43481675
+        },
+        {
+            "frame_id": 734,
+            "perf_time_ms": 562.448125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 388.017929291
+        },
+        {
+            "frame_id": 735,
+            "perf_time_ms": 591.049375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 388.629302666
+        },
+        {
+            "frame_id": 736,
+            "perf_time_ms": 585.468791,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 389.233107166
+        },
+        {
+            "frame_id": 737,
+            "perf_time_ms": 614.430084,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 389.87156175
+        },
+        {
+            "frame_id": 738,
+            "perf_time_ms": 611.128125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 390.5004645
+        },
+        {
+            "frame_id": 739,
+            "perf_time_ms": 600.521,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 391.119512041
+        },
+        {
+            "frame_id": 740,
+            "perf_time_ms": 594.891792,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 391.73351925
+        },
+        {
+            "frame_id": 741,
+            "perf_time_ms": 587.379625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 392.340474875
+        },
+        {
+            "frame_id": 742,
+            "perf_time_ms": 612.662375,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 392.9720895
+        },
+        {
+            "frame_id": 743,
+            "perf_time_ms": 580.512333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 393.572313791
+        },
+        {
+            "frame_id": 744,
+            "perf_time_ms": 598.411958,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 394.189686833
+        },
+        {
+            "frame_id": 745,
+            "perf_time_ms": 580.087833,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 394.788458083
+        },
+        {
+            "frame_id": 746,
+            "perf_time_ms": 588.696959,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 395.395963125
+        },
+        {
+            "frame_id": 747,
+            "perf_time_ms": 572.149125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 395.985916916
+        },
+        {
+            "frame_id": 748,
+            "perf_time_ms": 605.539417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 396.611293333
+        },
+        {
+            "frame_id": 749,
+            "perf_time_ms": 583.287542,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 397.213378708
+        },
+        {
+            "frame_id": 750,
+            "perf_time_ms": 611.11225,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 397.8435035
+        },
+        {
+            "frame_id": 751,
+            "perf_time_ms": 618.192292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 398.482280375
+        },
+        {
+            "frame_id": 752,
+            "perf_time_ms": 602.807583,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 399.103585833
+        },
+        {
+            "frame_id": 753,
+            "perf_time_ms": 567.379541,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 399.689683291
+        },
+        {
+            "frame_id": 754,
+            "perf_time_ms": 600.646333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 400.309109541
+        },
+        {
+            "frame_id": 755,
+            "perf_time_ms": 599.82725,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 400.927707666
+        },
+        {
+            "frame_id": 756,
+            "perf_time_ms": 577.688708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 401.522990083
+        },
+        {
+            "frame_id": 757,
+            "perf_time_ms": 579.545167,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 402.121203375
+        },
+        {
+            "frame_id": 758,
+            "perf_time_ms": 584.512875,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 402.724511583
+        },
+        {
+            "frame_id": 759,
+            "perf_time_ms": 588.398583,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 403.331383041
+        },
+        {
+            "frame_id": 760,
+            "perf_time_ms": 568.302792,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 403.918582958
+        },
+        {
+            "frame_id": 761,
+            "perf_time_ms": 593.4975,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 404.529639583
+        },
+        {
+            "frame_id": 762,
+            "perf_time_ms": 568.092583,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 405.116678958
+        },
+        {
+            "frame_id": 763,
+            "perf_time_ms": 606.582166,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 405.742791916
+        },
+        {
+            "frame_id": 764,
+            "perf_time_ms": 603.969042,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 406.36556175
+        },
+        {
+            "frame_id": 765,
+            "perf_time_ms": 591.746334,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 406.976108
+        },
+        {
+            "frame_id": 766,
+            "perf_time_ms": 637.437417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 407.636429625
+        },
+        {
+            "frame_id": 767,
+            "perf_time_ms": 572.511292,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 408.228725833
+        },
+        {
+            "frame_id": 768,
+            "perf_time_ms": 579.772,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 408.82928025
+        },
+        {
+            "frame_id": 769,
+            "perf_time_ms": 586.027083,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 409.434348083
+        },
+        {
+            "frame_id": 770,
+            "perf_time_ms": 531.339791,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 409.982864166
+        },
+        {
+            "frame_id": 771,
+            "perf_time_ms": 600.411167,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 410.600540875
+        },
+        {
+            "frame_id": 772,
+            "perf_time_ms": 573.092708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 411.192411208
+        },
+        {
+            "frame_id": 773,
+            "perf_time_ms": 584.207583,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 411.795562958
+        },
+        {
+            "frame_id": 774,
+            "perf_time_ms": 575.248417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 412.389654333
+        },
+        {
+            "frame_id": 775,
+            "perf_time_ms": 581.092042,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 412.989451958
+        },
+        {
+            "frame_id": 776,
+            "perf_time_ms": 551.533125,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 413.558152
+        },
+        {
+            "frame_id": 777,
+            "perf_time_ms": 576.097458,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 414.153048458
+        },
+        {
+            "frame_id": 778,
+            "perf_time_ms": 599.128625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 414.77138725
+        },
+        {
+            "frame_id": 779,
+            "perf_time_ms": 573.601709,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 415.362217875
+        },
+        {
+            "frame_id": 780,
+            "perf_time_ms": 574.291667,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 415.955475
+        },
+        {
+            "frame_id": 781,
+            "perf_time_ms": 607.613791,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 416.580661166
+        },
+        {
+            "frame_id": 782,
+            "perf_time_ms": 594.436542,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 417.193855208
+        },
+        {
+            "frame_id": 783,
+            "perf_time_ms": 570.239417,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 417.782703
+        },
+        {
+            "frame_id": 784,
+            "perf_time_ms": 594.570041,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 418.395350041
+        },
+        {
+            "frame_id": 785,
+            "perf_time_ms": 585.510667,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 418.999770958
+        },
+        {
+            "frame_id": 786,
+            "perf_time_ms": 623.216708,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 419.642390666
+        },
+        {
+            "frame_id": 787,
+            "perf_time_ms": 664.206083,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 420.327600208
+        },
+        {
+            "frame_id": 788,
+            "perf_time_ms": 590.265625,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 420.936497666
+        },
+        {
+            "frame_id": 789,
+            "perf_time_ms": 595.411792,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 421.55337725
+        },
+        {
+            "frame_id": 790,
+            "perf_time_ms": 587.351584,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 422.1592205
+        },
+        {
+            "frame_id": 791,
+            "perf_time_ms": 587.157333,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 422.765517458
+        },
+        {
+            "frame_id": 792,
+            "perf_time_ms": 588.285,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 423.372277916
+        },
+        {
+            "frame_id": 793,
+            "perf_time_ms": 573.753209,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 423.9653755
+        },
+        {
+            "frame_id": 794,
+            "perf_time_ms": 578.186917,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 424.563528458
+        },
+        {
+            "frame_id": 795,
+            "perf_time_ms": 580.340958,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 425.161780333
+        },
+        {
+            "frame_id": 796,
+            "perf_time_ms": 581.385583,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 425.762226916
+        },
+        {
+            "frame_id": 797,
+            "perf_time_ms": 583.25775,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 426.364331333
+        },
+        {
+            "frame_id": 798,
+            "perf_time_ms": 577.913459,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 426.960972125
+        },
+        {
+            "frame_id": 799,
+            "perf_time_ms": 587.688459,
+            "stab_rot_jitter_rad": null,
+            "stab_trans_jitter": null,
+            "success": false,
+            "timestamp": 427.5678325
+        }
+    ],
+    "summary": {
+        "performance": {
+            "fps": 1.943845741376188,
+            "mean_frame_time_ms": 514.4441139099999,
+            "stddev_frame_time_ms": 166.09072762134485
+        },
+        "pose_stability": {
+            "rotation_mean_error_rad": 0.0014705226871517948,
+            "rotation_stddev_rad": 0.003731803811128515,
+            "translation_mean_error": 0.3091637865749517,
+            "translation_stddev": 0.2317286650571993
+        },
+        "robustness": {
+            "failure_streak_count": 0,
+            "max_failure_streak": 715,
+            "success_rate": 0.10625,
+            "total_failures": 715
+        }
+    }
+}

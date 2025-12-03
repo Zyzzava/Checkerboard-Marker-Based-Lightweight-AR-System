@@ -6,8 +6,8 @@
 # Build files 
 build/
 
-# Data files 
-data/
+# Data files - included
+# data/
 
 # User-specific files
 *.rsuser
