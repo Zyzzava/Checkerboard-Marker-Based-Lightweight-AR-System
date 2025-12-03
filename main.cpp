@@ -6,7 +6,7 @@
 
 int main()
 {
-    bool useNft = false;         // Set to true to use NFT, false for chessboard
+    bool useNft = true;          // Set to true to use NFT, false for chessboard
     cv::VideoCapture capture(0); // Open camera here
 
     if (!capture.isOpened())
@@ -43,7 +43,7 @@ int main()
 
     // Run augmentation loop
     // Last two parameters are subfolder names for saving results for experiments
-    augmentLoop(capture, useNft, patternSize, squareSize, "detection_robustness", "occlusion");
+    augmentLoop(capture, useNft, patternSize, squareSize, "Demo", "Test");
 
     return 0;
 }

@@ -94,8 +94,6 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
     // Set OpenGL profile to core
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // Required on Mac
-    // Disable window resizing
-    glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
     // create window
     GLFWwindow *window = glfwCreateWindow(frame_width, frame_height, "AR", NULL, NULL);
