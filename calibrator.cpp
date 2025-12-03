@@ -11,14 +11,18 @@ const std::filesystem::path kBaseDataDir{"data"};
 // Helper to convert cv::Mat to JSON array
 nlohmann::json matToJson(const cv::Mat &mat)
 {
+    // Create the JSON row array
     nlohmann::json rows = nlohmann::json::array();
     for (int i = 0; i < mat.rows; i++)
     {
+        // Create the JSON column array
         nlohmann::json cols = nlohmann::json::array();
         for (int j = 0; j < mat.cols; j++)
         {
+            // Append the matrix element to the column array
             cols.push_back(mat.at<double>(i, j));
         }
+        // Append the column array to the row array
         rows.push_back(cols);
     }
     return rows;
@@ -95,34 +99,43 @@ void calibrateCamera(cv::VideoCapture &capture, int requiredSamples,
 
     // Create window
     cv::namedWindow(kWindowName, cv::WINDOW_AUTOSIZE);
+    // Frame and gray image
     cv::Mat frame;
     cv::Mat gray;
 
     // Capture loop
     while (collectedSamples < requiredSamples)
     {
+        // Capture frame
         capture >> frame;
         if (frame.empty())
         {
             continue;
         }
 
+        // Convert to grayscale
         cv::cvtColor(frame, gray, cv::COLOR_BGR2GRAY);
 
+        // Find chessboard corners
         const bool found = findChessboardCorners(gray, patternSize, imagePoints, cv::CALIB_CB_ADAPTIVE_THRESH | cv::CALIB_CB_NORMALIZE_IMAGE);
+        // Draw status
         drawStatus(frame, collectedSamples, requiredSamples);
-
+        // Draw found corners
         cv::drawChessboardCorners(frame, patternSize, imagePoints, found);
+        // Show frame
         cv::imshow(kWindowName, frame);
-        const int key = cv::waitKey(30);
 
+        const int key = cv::waitKey(30);
         if (found && (key == 32)) // Space key
         {
+            // Refine corner locations
             cv::TermCriteria criteria(cv::TermCriteria::EPS | cv::TermCriteria::MAX_ITER, 30, 0.001);
+            // Refine the corner locations to sub-pixel accuracy
             cv::cornerSubPix(gray, imagePoints, cv::Size(11, 11), cv::Size(-1, -1), criteria);
-
+            // Store points
             allImagePoints.push_back(imagePoints);
             allObjectPoints.push_back(templatePoints);
+            // Increment sample count
             collectedSamples++;
             // Optionally save the calibration image
             cv::imwrite((imageDir / ("capture_" + std::to_string(collectedSamples) + ".png")).string(), frame);
@@ -133,13 +146,14 @@ void calibrateCamera(cv::VideoCapture &capture, int requiredSamples,
             break;
         }
     }
-
+    // Destroy the calibration window
     cv::destroyWindow(kWindowName);
-
     // Calibration logic would go here (not implemented for brevity)
     std::cout << "\nCalibrating camera... Please wait." << std::endl;
+    // Calibration results
     cv::Mat cameraMatrix, distCoeffs, R, T;
 
+    // Perform camera calibration
     double reprojectionError = cv::calibrateCamera(allObjectPoints, allImagePoints, gray.size(), cameraMatrix, distCoeffs, R, T);
 
     std::cout << "Calibration finished!" << std::endl;

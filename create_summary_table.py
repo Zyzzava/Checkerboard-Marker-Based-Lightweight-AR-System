@@ -92,11 +92,11 @@ def get_comparison_data():
     if 'static' in raw_data:
         c_val_t = raw_data['static'].get('checkerboard', {}).get('trans_jitter', None)
         n_val_t = raw_data['static'].get('nft', {}).get('trans_jitter', None)
-        table_rows.append(["Stability", "Static", "Trans. Jitter (mm) (mean) $\downarrow$", c_val_t, n_val_t, 'min'])
+        table_rows.append(["Stability", "Static", "Mean Trans. Jitter (mm) $\downarrow$", c_val_t, n_val_t, 'min'])
         
         c_val_r = raw_data['static'].get('checkerboard', {}).get('rot_jitter', None)
         n_val_r = raw_data['static'].get('nft', {}).get('rot_jitter', None)
-        table_rows.append(["Stability", "Static", "Rot. Jitter (rad) (mean) $\downarrow$", c_val_r, n_val_r, 'min'])
+        table_rows.append(["Stability", "Static", "Mean Rot. Jitter (rad) $\downarrow$", c_val_r, n_val_r, 'min'])
 
     return table_rows
 

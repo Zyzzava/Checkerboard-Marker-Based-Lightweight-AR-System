@@ -8,11 +8,11 @@
 static std::pair<double, double> getMeanStdDev(const std::vector<double> &v)
 {
     if (v.empty())
-        return {0.0, 0.0};
-    double sum = std::accumulate(v.begin(), v.end(), 0.0);
-    double mean = sum / v.size();
-    double sq_sum = std::inner_product(v.begin(), v.end(), v.begin(), 0.0);
-    double stddev = std::sqrt(std::max(0.0, sq_sum / v.size() - mean * mean));
+        return {0.0, 0.0};                                                     // Avoid division by zero
+    double sum = std::accumulate(v.begin(), v.end(), 0.0);                     // Sum of elements
+    double mean = sum / v.size();                                              // Mean calculation
+    double sq_sum = std::inner_product(v.begin(), v.end(), v.begin(), 0.0);    // Sum of squares
+    double stddev = std::sqrt(std::max(0.0, sq_sum / v.size() - mean * mean)); // Standard deviation calculation
     return {mean, stddev};
 }
 
@@ -20,12 +20,12 @@ static std::pair<double, double> getMeanStdDev(const std::vector<double> &v)
 nlohmann::json SessionStats::computePerformance() const
 {
     std::vector<double> times;
-    times.reserve(frames.size());
+    times.reserve(frames.size()); // Reserve space to avoid reallocations
     for (const auto &f : frames)
-        times.push_back(f.frameTimeMs);
+        times.push_back(f.frameTimeMs); // Collect frame times
 
-    auto [mean, stddev] = getMeanStdDev(times);
-    double fps = (mean > 0) ? 1000.0 / mean : 0.0;
+    auto [mean, stddev] = getMeanStdDev(times);    // Calculate mean and stddev
+    double fps = (mean > 0) ? 1000.0 / mean : 0.0; // Calculate FPS
 
     return {
         {"mean_frame_time_ms", mean},
@@ -36,6 +36,7 @@ nlohmann::json SessionStats::computePerformance() const
 // 2. Compute Robustness Summary
 nlohmann::json SessionStats::computeDetectionRobustness() const
 {
+    // Analyze pose success/failure streaks
     int success = 0;
     int fail = 0;
     int maxFailStreak = 0;

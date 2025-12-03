@@ -2,16 +2,17 @@
 #include <opencv2/features2d.hpp>
 #include <iostream>
 
+// Implements pose estimation using Natural Feature Tracking (NFT)
 class NFTTracker : public PoseTracker
 {
-    std::string imagePath;
-    cv::Mat refImage;
-    cv::Mat refDescriptors;
-    std::vector<cv::KeyPoint> refKeypoints;
+    std::string imagePath;                    // Path to reference image
+    cv::Mat refImage;                         // Reference image
+    cv::Mat refDescriptors;                   // Descriptors of reference image keypoints
+    std::vector<cv::KeyPoint> refKeypoints;   // Keypoints of reference image
     std::vector<cv::Point3f> refObjectPoints; // The "3D" representation of the image pixels
 
-    cv::Ptr<cv::Feature2D> detector;
-    cv::Ptr<cv::DescriptorMatcher> matcher;
+    cv::Ptr<cv::Feature2D> detector;        // Feature detector (ORB)
+    cv::Ptr<cv::DescriptorMatcher> matcher; // Descriptor matcher
 
     // Scale factor to convert pixels to "World Units"
     float scaleFactor = 0.1f;
@@ -56,6 +57,7 @@ public:
 
         // Detect features in current frame
         std::vector<cv::KeyPoint> currKeypoints;
+        // Compute descriptors
         cv::Mat currDescriptors;
         detector->detectAndCompute(gray, cv::noArray(), currKeypoints, currDescriptors);
 
@@ -71,12 +73,12 @@ public:
         std::vector<cv::Point3f> goodObjectPoints;
         std::vector<cv::Point2f> goodScenePoints;
 
-        const float ratio_thresh = 0.75f;
+        const float ratio_thresh = 0.75f; // Lowe's ratio test
         for (const auto &match_pair : knn_matches)
         {
             if (match_pair.size() == 2 && match_pair[0].distance < ratio_thresh * match_pair[1].distance)
             {
-                // Crucial: We map the 3D point of the Reference to the 2D point of the Scene
+                // map the 3D point of the Reference to the 2D point of the Scene
                 goodMatches.push_back(match_pair[0]);
                 goodObjectPoints.push_back(refObjectPoints[match_pair[0].queryIdx]);
                 goodScenePoints.push_back(currKeypoints[match_pair[0].trainIdx].pt);

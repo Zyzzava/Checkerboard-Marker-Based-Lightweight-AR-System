@@ -7,6 +7,7 @@
 
 namespace ar
 {
+    // Helper to convert JSON array to cv::Mat
     bool loadCalibrationData(const std::filesystem::path &path,
                              cv::Mat &cameraMatrix,
                              cv::Mat &distCoeffs);

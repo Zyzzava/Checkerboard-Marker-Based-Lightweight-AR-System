@@ -17,7 +17,7 @@ int main()
 
     cv::Size patternSize(8, 6); // Number of inner corners per a chessboard row and column
     float squareSize = 25.0f;   // Set your physical square size here
-    int requiredSamples = 15;
+    int requiredSamples = 15;   // Number of samples for calibration
 
     // Check if calibration data exists; if not, run calibration
     // Build calibration folder path

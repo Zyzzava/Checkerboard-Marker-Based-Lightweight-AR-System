@@ -49,10 +49,10 @@ GLuint Renderer::createShaderProgram(const char *vertPath, const char *fragPath)
         return 0;
 
     // Link shaders into a program
-    GLuint shaderProgram = glCreateProgram();
-    glAttachShader(shaderProgram, vertexShader);
-    glAttachShader(shaderProgram, fragmentShader);
-    glLinkProgram(shaderProgram);
+    GLuint shaderProgram = glCreateProgram();      // Create program
+    glAttachShader(shaderProgram, vertexShader);   // Attach vertex shader
+    glAttachShader(shaderProgram, fragmentShader); // Attach fragment shader
+    glLinkProgram(shaderProgram);                  // Link program
 
     // Check for linking errors
     GLint success;
@@ -65,8 +65,8 @@ GLuint Renderer::createShaderProgram(const char *vertPath, const char *fragPath)
         return 0;
     }
     // Clean up shaders as they're linked into the program now
-    glDeleteShader(vertexShader);
-    glDeleteShader(fragmentShader);
+    glDeleteShader(vertexShader);   // Delete vertex shader
+    glDeleteShader(fragmentShader); // Delete fragment shader
 
     return shaderProgram;
 }
@@ -77,36 +77,40 @@ std::string shaderDir = std::string(PROJECT_ROOT) + "/shaders/";
 Renderer::Renderer(int width, int height) : screenWidth(width), screenHeight(height)
 {
     // -- SETUP FOR BACKGROUND RENDERING --
+    // Load and compile background shaders
     backgroundShader = createShaderProgram((shaderDir + "background.vert").c_str(), (shaderDir + "background.frag").c_str());
+    // Fullscreen quad vertices (x, y, u, v)
     float quadVertices[] = {
         // x, y, u, v
-        -1.0f, -1.0f, 0.0f, 0.0f,
-        1.0f, -1.0f, 1.0f, 0.0f,
-        -1.0f, 1.0f, 0.0f, 1.0f,
-        1.0f, 1.0f, 1.0f, 1.0f};
+        -1.0f, -1.0f, 0.0f, 0.0f, // Bottom-left
+        1.0f, -1.0f, 1.0f, 0.0f,  // Bottom-right
+        -1.0f, 1.0f, 0.0f, 1.0f,  // Top-left
+        1.0f, 1.0f, 1.0f, 1.0f};  // Top-right
 
-    glGenVertexArrays(1, &backgroundVAO);
-    glGenBuffers(1, &backgroundVBO);
-    glBindVertexArray(backgroundVAO);
-    glBindBuffer(GL_ARRAY_BUFFER, backgroundVBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(quadVertices), &quadVertices, GL_STATIC_DRAW);
+    glGenVertexArrays(1, &backgroundVAO);                                               // Generate VAO
+    glGenBuffers(1, &backgroundVBO);                                                    // Generate VBO
+    glBindVertexArray(backgroundVAO);                                                   // Bind VAO
+    glBindBuffer(GL_ARRAY_BUFFER, backgroundVBO);                                       // Bind VBO
+    glBufferData(GL_ARRAY_BUFFER, sizeof(quadVertices), &quadVertices, GL_STATIC_DRAW); // Upload vertex data
 
     // Attribute 0 (Position: x, y)
-    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void *)0);
-    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void *)0); // position
+    glEnableVertexAttribArray(0);                                                  // Enable attribute 0
 
     // Attribute 1 (TexCoord: u, v)
-    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void *)(2 * sizeof(float)));
-    glEnableVertexAttribArray(1);
+    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void *)(2 * sizeof(float))); // texcoord
+    glEnableVertexAttribArray(1);                                                                    // Enable attribute 1
 
-    glGenTextures(1, &cameraTexture);
-    glBindTexture(GL_TEXTURE_2D, cameraTexture);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, screenWidth, screenHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
+    glGenTextures(1, &cameraTexture);                                                                     // Generate texture for camera frame
+    glBindTexture(GL_TEXTURE_2D, cameraTexture);                                                          // Bind texture
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);                                     // Set texture parameters
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);                                     // Set texture parameters
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, screenWidth, screenHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL); // Allocate texture
 
     // -- SETUP FOR CUBE RENDERING --
+    // Load and compile cube shaders
     cubeShader = createShaderProgram((shaderDir + "cube.vert").c_str(), (shaderDir + "cube.frag").c_str());
+    // Cube vertices (x, y, z, r, g, b)
     float cubeVertices[] = {
         // positions            // colors
         // Dimensions: Width 25, Height 25, Depth 25.
@@ -159,30 +163,34 @@ Renderer::Renderer(int width, int height) : screenWidth(width), screenHeight(hei
         12.5f, 12.5f, 0.0f, 0.0f, 1.0f, 1.0f,
         -12.5f, 12.5f, 0.0f, 0.0f, 1.0f, 1.0f,
         -12.5f, 12.5f, -25.0f, 0.0f, 1.0f, 1.0f};
-    glGenVertexArrays(1, &cubeVAO);
-    glGenBuffers(1, &cubeVBO);
-    glBindVertexArray(cubeVAO);
-    glBindBuffer(GL_ARRAY_BUFFER, cubeVBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVertices), cubeVertices, GL_STATIC_DRAW);
-    // Position attribute
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void *)0);
-    glEnableVertexAttribArray(0);
-    // Color attribute
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void *)(3 * sizeof(float)));
-    glEnableVertexAttribArray(1);
+    glGenVertexArrays(1, &cubeVAO);                                                    // Generate VAO
+    glGenBuffers(1, &cubeVBO);                                                         // Generate VBO
+    glBindVertexArray(cubeVAO);                                                        // Bind VAO
+    glBindBuffer(GL_ARRAY_BUFFER, cubeVBO);                                            // Bind VBO
+    glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVertices), cubeVertices, GL_STATIC_DRAW); // Upload vertex data
 
+    // Position attribute
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void *)0); // position
+    glEnableVertexAttribArray(0);                                                  // Enable attribute 0
+    // Color attribute
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void *)(3 * sizeof(float))); // color
+    glEnableVertexAttribArray(1);                                                                    // Enable attribute 1
+
+    // Enable depth testing for 3D cube rendering
     glEnable(GL_DEPTH_TEST);
 }
 
+// Destructor to clean up OpenGL resources
 Renderer::~Renderer()
 {
-    glDeleteVertexArrays(1, &backgroundVAO);
-    glDeleteBuffers(1, &backgroundVBO);
-    glDeleteProgram(backgroundShader);
-    glDeleteTextures(1, &cameraTexture);
-    glDeleteVertexArrays(1, &cubeVAO);
-    glDeleteBuffers(1, &cubeVBO);
-    glDeleteProgram(cubeShader);
+    // Clean up OpenGL resources
+    glDeleteVertexArrays(1, &backgroundVAO); // Delete background VAO
+    glDeleteBuffers(1, &backgroundVBO);      // Delete background VBO
+    glDeleteProgram(backgroundShader);       // Delete background shader program
+    glDeleteTextures(1, &cameraTexture);     // Delete camera texture
+    glDeleteVertexArrays(1, &cubeVAO);       // Delete cube VAO
+    glDeleteBuffers(1, &cubeVBO);            // Delete cube VBO
+    glDeleteProgram(cubeShader);             // Delete cube shader program
 }
 
 // Update the background texture with a new camera frame
@@ -190,10 +198,12 @@ void Renderer::updateBackground(const cv::Mat &frame)
 {
     // Convert BGR to RGB
     cv::Mat rgb;
+    // Convert the color space from BGR to RGB
     cv::cvtColor(frame, rgb, cv::COLOR_BGR2RGB);
-
+    // Flip the image vertically to match OpenGL's coordinate system
     cv::flip(rgb, rgb, 0); // Flip vertically for OpenGL
 
+    // Bind the camera texture
     glBindTexture(GL_TEXTURE_2D, cameraTexture);
     // Update texture with new frame data
     glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, screenWidth, screenHeight, GL_RGB, GL_UNSIGNED_BYTE, rgb.data);
@@ -243,23 +253,23 @@ void Renderer::drawCube(const double *modelViewMatrix, const GLfloat *projection
         }
 
         // Specific check for Translation (last column of ModelView)
-        double tx = modelViewMatrix[12];
-        double ty = modelViewMatrix[13];
-        double tz = modelViewMatrix[14];
+        double tx = modelViewMatrix[12]; // X translation
+        double ty = modelViewMatrix[13]; // Y translation
+        double tz = modelViewMatrix[14]; // Z translation
         std::cout << "Translation (Tvec): " << tx << ", " << ty << ", " << tz << std::endl;
     }
 
-    glEnable(GL_DEPTH_TEST);
-    glUseProgram(cubeShader);
+    glEnable(GL_DEPTH_TEST);  // Enable depth test for cube rendering
+    glUseProgram(cubeShader); // Use the cube shader program
 
     // Use double precision for all matrix math
-    double modelViewMatrixD[16];
-    double projectionMatrixD[16];
+    double modelViewMatrixD[16];  // Copy input float matrices to double
+    double projectionMatrixD[16]; // Copy input float matrices to double
     // Copy input float matrices to double
     for (int i = 0; i < 16; ++i)
     {
-        modelViewMatrixD[i] = static_cast<double>(modelViewMatrix[i]);
-        projectionMatrixD[i] = static_cast<double>(projectionMatrix[i]);
+        modelViewMatrixD[i] = static_cast<double>(modelViewMatrix[i]);   // Copy modelViewMatrix
+        projectionMatrixD[i] = static_cast<double>(projectionMatrix[i]); // Copy projectionMatrix
     }
 
     // Compute Model-View-Projection (MVP) matrix in double
@@ -285,23 +295,23 @@ void Renderer::drawCube(const double *modelViewMatrix, const GLfloat *projection
 
     // Get uniform location for MVP
     GLint mvpLocation = glGetUniformLocation(cubeShader, "mvp");
-    glUniformMatrix4fv(mvpLocation, 1, GL_FALSE, mvpMatrix);
+    glUniformMatrix4fv(mvpLocation, 1, GL_FALSE, mvpMatrix); // Set the MVP matrix uniform
 
     glBindVertexArray(cubeVAO);
-    glDrawArrays(GL_TRIANGLES, 0, 36);
+    glDrawArrays(GL_TRIANGLES, 0, 36); // Draw the cube
 }
 
 void glFrustum(float left, float right, float bottom, float top, float near, float far, GLfloat *projectionMatrix)
 {
-    std::memset(projectionMatrix, 0, 16 * sizeof(GLfloat));
+    std::memset(projectionMatrix, 0, 16 * sizeof(GLfloat)); // Initialize to zero
 
-    projectionMatrix[0] = (2.0f * near) / (right - left);
-    projectionMatrix[5] = (2.0f * near) / (top - bottom);
-    projectionMatrix[8] = (right + left) / (right - left);
-    projectionMatrix[9] = (top + bottom) / (top - bottom);
-    projectionMatrix[10] = -(far + near) / (far - near);
-    projectionMatrix[11] = -1.0f;
-    projectionMatrix[14] = -(2.0f * far * near) / (far - near);
+    projectionMatrix[0] = (2.0f * near) / (right - left);       // Set horizontal scaling
+    projectionMatrix[5] = (2.0f * near) / (top - bottom);       // Set vertical scaling
+    projectionMatrix[8] = (right + left) / (right - left);      // Set horizontal translation
+    projectionMatrix[9] = (top + bottom) / (top - bottom);      // Set vertical translation
+    projectionMatrix[10] = -(far + near) / (far - near);        // Set depth scaling
+    projectionMatrix[11] = -1.0f;                               // Set perspective divide
+    projectionMatrix[14] = -(2.0f * far * near) / (far - near); // Set depth translation
 }
 
 void Renderer::buildProjectionMatrix(const cv::Mat &cameraMatrix, int screen_w, int screen_h, GLfloat *projectionMatrix)
@@ -310,19 +320,19 @@ void Renderer::buildProjectionMatrix(const cv::Mat &cameraMatrix, int screen_w, 
     float far = 3000.0f; // Far clipping plane
 
     // Extract focal lengths and principal point from camera matrix
-    float fx = static_cast<float>(cameraMatrix.at<double>(0, 0));
-    float fy = static_cast<float>(cameraMatrix.at<double>(1, 1));
-    float cx = static_cast<float>(cameraMatrix.at<double>(0, 2));
-    float cy = static_cast<float>(cameraMatrix.at<double>(1, 2));
+    float fx = static_cast<float>(cameraMatrix.at<double>(0, 0)); // Focal length in x
+    float fy = static_cast<float>(cameraMatrix.at<double>(1, 1)); // Focal length in y
+    float cx = static_cast<float>(cameraMatrix.at<double>(0, 2)); // Principal point x
+    float cy = static_cast<float>(cameraMatrix.at<double>(1, 2)); // Principal point y
 
     std::cout << "Camera Intrinsics: fx=" << fx << ", fy=" << fy << ", cx=" << cx << ", cy=" << cy << std::endl;
     std::cout << "Screen size: " << screen_w << "x" << screen_h << std::endl;
 
     // Calculate frustum boundaries
-    float left = (0 - cx) / fx * near;
-    float right = (screen_w - cx) / fx * near;
-    float bottom = (cy - screen_h) / fy * near; // OpenCV's Y is top-down, OpenGL's is bottom-up
-    float top = cy / fy * near;
+    float left = (0 - cx) / fx * near;          // Left boundary of the frustum
+    float right = (screen_w - cx) / fx * near;  // Right boundary of the frustum
+    float bottom = (cy - screen_h) / fy * near; // OpenCV's Y is top-down, OpenGL's is bottom-up, so invert
+    float top = cy / fy * near;                 // Top boundary of the frustum
 
     // Build the projection matrix using the frustum values
     glFrustum(left, right, bottom, top, near, far, projectionMatrix);

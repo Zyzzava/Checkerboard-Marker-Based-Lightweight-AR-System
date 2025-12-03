@@ -4,6 +4,7 @@
 
 namespace ar
 {
+    // Helper to convert JSON array to cv::Mat
     cv::Mat jsonToMat(const nlohmann::json &json)
     {
         if (!json.is_array() || json.empty())
@@ -22,6 +23,7 @@ namespace ar
         return mat;
     }
 
+    // Load calibration data from JSON file
     bool loadCalibrationData(const std::filesystem::path &path,
                              cv::Mat &cameraMatrix,
                              cv::Mat &distCoeffs)

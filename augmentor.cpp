@@ -12,26 +12,49 @@
 #include "statistics.hpp"
 #include <fstream>
 
+// Initialize augmentor by loading camera calibration data
+void initAugmentor(cv::Mat &cameraMatrix, cv::Mat &distCoeffs, cv::Size patternSize)
+{
+    // Build file path based on pattern size
+    std::string patternStr = std::to_string(patternSize.width) + "x" + std::to_string(patternSize.height);
+    // Load calibration data
+    std::filesystem::path calibrationJson = std::filesystem::path("data/calibration") / patternStr / "calibration.json";
+    // Load calibration data from JSON file
+    if (!ar::loadCalibrationData(calibrationJson, cameraMatrix, distCoeffs))
+    {
+        std::cerr << "Unable to read " << calibrationJson << std::endl;
+    }
+}
+
+// Main augmentation loop - captures video, estimates pose, and renders AR content
 void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, float squareSize, const std::string &experimentName, const std::string &testName)
 {
+    // create pose tracker
     std::unique_ptr<PoseTracker> tracker;
 
     // initialize tracker
     if (useNft)
     {
+        // NFT Tracker
         auto nft = std::make_unique<NFTTracker>("data/reference/reference.png");
+        // Initialize NFT tracker
         nft->init();
+        // assign to base pointer
         tracker = std::move(nft);
     }
     else
     {
+        // Chessboard Tracker
         auto chess = std::make_unique<ChessboardTracker>(patternSize, squareSize);
+        // Initialize Chessboard tracker
         chess->init();
+        // assign to base pointer
         tracker = std::move(chess);
     }
 
     // load calibration data
     cv::Mat cameraMatrix, distCoeffs;
+    // initialize augmentor (load calibration)
     initAugmentor(cameraMatrix, distCoeffs, patternSize);
 
     // Let's print it for debugging
@@ -50,6 +73,7 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
         std::cerr << "Error: Could not open camera." << std::endl;
         return;
     }
+    // Get frame dimensions
     int frame_width = static_cast<int>(cap.get(cv::CAP_PROP_FRAME_WIDTH));
     int frame_height = static_cast<int>(cap.get(cv::CAP_PROP_FRAME_HEIGHT));
     std::cout << "Camera capture size: " << frame_width << "x" << frame_height << std::endl;
@@ -64,18 +88,23 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
     if (!glfwInit())
         return;
 
+    // Set OpenGL version (3.3 Core)
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    // Set OpenGL profile to core
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // Required on Mac
+    // Disable window resizing
     glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
+    // create window
     GLFWwindow *window = glfwCreateWindow(frame_width, frame_height, "AR", NULL, NULL);
     if (!window)
     {
         glfwTerminate();
         return;
     }
+    // make context current
     glfwMakeContextCurrent(window);
     if (glewInit() != GLEW_OK)
         return;
@@ -85,20 +114,28 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
 
     // calculate projection matrix
     GLfloat projectionMatrix[16];
+    // build projection matrix from camera intrinsics
     renderer.buildProjectionMatrix(cameraMatrix, frame_width, frame_height, projectionMatrix);
 
+    // Frame variable
     cv::Mat frame;
+    // Pose variables
     cv::Mat rvec, tvec, rotationMatrix;
 
     // Statistical collection
     int frameCount = 0;
+    // Set count for statistical sets
     int setCount = 0;
+    // Frames per set for detection_robustness experiment
     const int framesPerSet = 800;
+    // Session statistics
     SessionStats stats;
+    // Start time for timestamps
     auto t_start = std::chrono::high_resolution_clock::now();
 
     while (!glfwWindowShouldClose(window))
     {
+        // Start frame timer
         auto frameStart = std::chrono::high_resolution_clock::now();
         // capture frame
         cap >> frame;
@@ -118,7 +155,9 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
 
         // Update viewport in case window size != framebuffer size
         int display_w, display_h;
+        // Get framebuffer size
         glfwGetFramebufferSize(window, &display_w, &display_h);
+        // Set viewport
         glViewport(0, 0, display_w, display_h);
 
         // display camera frame as background
@@ -126,6 +165,7 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
 
         // update and draw camera frame as background
         renderer.updateBackground(frame);
+        // draw background
         renderer.drawBackground();
 
         // 3. Estimate pose using zeroDist
@@ -134,6 +174,7 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
 
         if (success)
         {
+            // build rotation matrix
             cv::Rodrigues(rvec, rotationMatrix);
 
             // build modelview matrix
@@ -165,7 +206,7 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
             modelViewMatrix[15] = 1.0;
 
             // --- RENDER ---
-            // For a simple test, let's project the 3D axes onto the image.
+            // project the 3D axes onto the image.
             std::vector<cv::Point3f> axisPoints;
             axisPoints.push_back(cv::Point3f(0, 0, 0));               // Origin (for the circle)
             axisPoints.push_back(cv::Point3f(squareSize * 3, 0, 0));  // X-axis
@@ -187,8 +228,10 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
 
         // Statistical collection
         auto frameEnd = std::chrono::high_resolution_clock::now();
+        // Calculate frame time in milliseconds
         double frameTimeMs = std::chrono::duration<double, std::milli>(frameEnd - frameStart).count();
 
+        // Store frame statistics
         stats.frames.push_back(FrameStats{
             frameCount,
             std::chrono::duration<double>(frameEnd - t_start).count(),
@@ -211,6 +254,7 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
 
         // Draw frame count on the image
         std::string frameText = "Frame: " + std::to_string(frameCount);
+        // Put text on frame
         cv::putText(
             frame,
             frameText,
@@ -290,15 +334,5 @@ void augmentLoop(cv::VideoCapture &capture, bool &useNft, cv::Size patternSize, 
         {
             std::cerr << "Unable to open file to save session statistics." << std::endl;
         }
-    }
-}
-
-void initAugmentor(cv::Mat &cameraMatrix, cv::Mat &distCoeffs, cv::Size patternSize)
-{
-    std::string patternStr = std::to_string(patternSize.width) + "x" + std::to_string(patternSize.height);
-    std::filesystem::path calibrationJson = std::filesystem::path("data/calibration") / patternStr / "calibration.json";
-    if (!ar::loadCalibrationData(calibrationJson, cameraMatrix, distCoeffs))
-    {
-        std::cerr << "Unable to read " << calibrationJson << std::endl;
     }
 }
